@@ -43,5 +43,5 @@ for (i = 0; i < 18; i++) {
 //$("#pixelPhysics").val(pixelField.join());
 
 $(document).ready(function(){
-    $("#wug").html(pixelField.join("\n"));
+    $("#theTextArea").html(pixelField.join("\n"));
    });
