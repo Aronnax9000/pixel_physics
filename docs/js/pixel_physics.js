@@ -53,6 +53,7 @@ function parsetext(textareaid) {
     return linesA;
 }
 
+
 function transformTo6633(linesA) {
     var matrix6633 = [];
     for(row6 = 0; row6 < 6; row6++) {
@@ -68,7 +69,7 @@ function transformTo6633(linesA) {
             var line = (row6 * 6) + (row3 * 3);
             var triple = col6;
             var letter = col3;
-            console.log(row6 + ","  + col3 + "," + line + "," + triple + "," + letter);
+            console.log(row6 + ","  + row3 + "," + line + "," + triple + "," + letter);
             row3Matrix.push(linesA[line][triple][letter]);
           }
         }
