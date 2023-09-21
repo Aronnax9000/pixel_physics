@@ -29,7 +29,7 @@ $(document).ready(function(){
     $('#theButton').click(function(){
         doSomething();
     });
-    $("#pixelField").append($("P").text("hi there"));
+    $(".pixelField").append($("P").text("hi there"));
 });
 
 function parsetext(textareaid) {
