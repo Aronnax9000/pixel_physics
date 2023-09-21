@@ -25,7 +25,7 @@ var pixelField = [
 for (i = 0; i < 18; i++) {
     var currentPixelField = pixelField[i];
     alert(currentPixelField);
-    var splitPixelField = split(currentPixelField, " ");
+    var splitPixelField = currentPixelField.split(" ");
     for (j = 0; j < 18; j++) {
         var pixelFieldRow = splitPixelField[j];
         alert(pixelFieldRow);
