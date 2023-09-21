@@ -43,6 +43,5 @@ for (i = 0; i < 18; i++) {
 //$("#pixelPhysics").val(pixelField.join());
 
 $(document).ready(function(){
-    $("#wug").html("This is Hello World by JQuery");
-    $("#wuh").html("This is Hello World by JQuery");
+    $("#wug").html(pixelField.join("\n"));
    });
