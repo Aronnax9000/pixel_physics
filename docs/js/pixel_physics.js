@@ -42,5 +42,9 @@ for (i = 0; i < 18; i++) {
 //$("#pixelPhysics").val(pixelField.join());
 
 $(document).ready(function(){
-    $("#theTextArea").html(pixelField.join("\n"));
-   });
+    $("#theButton").onclick = doSomething;
+});
+
+function doSomething() {
+   $("#theTextArea").html(pixelField.join("\n"));
+}
