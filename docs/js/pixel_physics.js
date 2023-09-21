@@ -113,16 +113,25 @@ function doSomething() {
 
     $("#textarea2").html(answer);
 
+    
     var matrix6633 = transformTo6633(linesA);
     $("#textarea3").html(matrix6633ToText(matrix6633));
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
             var divcell = $("<div>").addClass('pixelField3x3');
             $(".pixelField6x6").append(divcell);
-            for(k = 0; k < 2; k++)
-              for(l = 0; l < 2; l++) 
-                divcell.append($("<div>").text(matrix6633[i][j][k][l]));
-
+            for(k = 0; k < 3; k++) {
+              for(l = 0; l < 3; l++) {
+                var value = matrix6633[i][j][k][l];
+                var imageName;
+                switch(value) {
+                    case "-":  imageName = "minus"; break;
+                    case "0":  imageName = "zero"; break;
+                    case "+":  imageName = "plus"; break;
+                }
+                divcell.append($("<img>").attr('src', 'img/' + imageName + '.png'));
+              }
+            }
         }
     }
 
