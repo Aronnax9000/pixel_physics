@@ -53,7 +53,7 @@ var answer = linesA2.join('\n');
 $("#textarea2").val(answer);
 
 $(document).ready(function(){
-    $("#textarea1").html(pixelField.join("\n"));
+    $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
         doSomething();
     });
