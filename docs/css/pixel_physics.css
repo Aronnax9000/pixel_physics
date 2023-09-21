@@ -17,7 +17,16 @@ BODY {background-color: blue;}
     gap: 0px;
     grid-auto-rows: minmax(100px, auto);
   }
-  .pixelField {
+  .pixelField3x3 {
+    /* style */
+    border: solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+    .pixelField {
     /* style */
     border: solid;
   }
