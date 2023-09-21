@@ -15,8 +15,8 @@ BODY {background-color: blue;}
     grid-template-columns: repeat(6, auto-fit);
     grid-template-rows: repeat(6, auto-fit);
     gap: 0px;
-    grid-auto-columns: minmax(40px, 40px);
-    grid-auto-rows: minmax(40px, 40px);
+    grid-auto-columns: 40px;
+    grid-auto-rows: 40px;
   }
   .pixelField3x3 {
     /* style */
@@ -25,8 +25,8 @@ BODY {background-color: blue;}
     grid-template-columns: repeat(3, auto-fit);
     grid-template-rows: repeat(3, auto-fit);
     gap: 0px;
-    grid-auto-columns: minmax(40px, 40px);
-    grid-auto-rows: minmax(40px, 40px);
+    grid-auto-columns: 40px;
+    grid-auto-rows: 40px;
   }
     .pixelField {
     /* style */
