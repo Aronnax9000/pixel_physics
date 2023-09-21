@@ -31,8 +31,8 @@ $(document).ready(function(){
     });
 });
 
-function doSomething() {
-    var text = $("#textarea1").val().split('\n');
+function parsetext(textareaid) {
+    var text = $(textareaid).val().split('\n');
     var linesA = [];
 
     for (i = 0; i < 18; i++) {
@@ -50,6 +50,12 @@ function doSomething() {
             }
         }
     }
+    return linesA;
+}
+
+function doSomething() {
+    var linesA = parsetext("#textarea1");
+    
     
 
     var linesA2 = [];
