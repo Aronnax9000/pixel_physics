@@ -20,6 +20,8 @@ var pixelField = [
 "0+- +0- +-0 -+0 -0+ 0-+",
 "-0+ 0-+ 0+- +0- +-0 -+0"
 ];
+
+alert(pixelField);
 /*
 
 for (i = 0; i < 18; i++) {
