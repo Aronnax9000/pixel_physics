@@ -21,23 +21,6 @@ var pixelFieldLines = [
 "-0+ 0-+ 0+- +0- +-0 -+0"
 ];
 
-var linesA = [];
-
-for (i = 0; i < 18; i++) {
-    var lineA = [];
-    linesA.push(lineA);
-    
-    var triples = pixelFieldLines[i].split(" "); // Array of six three character strings
-    
-    for (j = 0; j < 6; j++) {
-        var triple = triples[j]; // string of three characters
-        var tripleA = [];
-        lineA.push(tripleA);
-        for (k = 0; k < 3; k++) {
-            tripleA.push(triple.substring(k,k+1));
-        }
-    }
-}
 
 
 $("#textarea1").html(pixelFieldLines.join("\n"));
@@ -50,6 +33,25 @@ $(document).ready(function(){
 });
 
 function doSomething() {
+    var linesA = [];
+
+    for (i = 0; i < 18; i++) {
+        var lineA = [];
+        linesA.push(lineA);
+        
+        var triples = pixelFieldLines[i].split(" "); // Array of six three character strings
+        
+        for (j = 0; j < 6; j++) {
+            var triple = triples[j]; // string of three characters
+            var tripleA = [];
+            lineA.push(tripleA);
+            for (k = 0; k < 3; k++) {
+                tripleA.push(triple.substring(k,k+1));
+            }
+        }
+    }
+    
+
     var linesA2 = [];
     for (i=0;i<18;i++){
         var triplesA = [];
