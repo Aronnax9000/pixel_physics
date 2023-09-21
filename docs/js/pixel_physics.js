@@ -41,3 +41,7 @@ for (i = 0; i < 18; i++) {
 */
 //alert(pixelField.join());
 //$("#pixelPhysics").val(pixelField.join());
+
+$(document).ready(function(){
+    $("#wug").html("This is Hello World by JQuery");
+   });
