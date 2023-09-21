@@ -10,6 +10,7 @@ BODY {background-color: blue;}
   
   .pixelField6x6 {
   /* style */
+    width: 720px;
     border: solid;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
