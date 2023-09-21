@@ -50,8 +50,9 @@ for (i=0;i<18;i++){
     linesA2.push(line);
 }
 var answer = linesA2.join('\n');
-$("#textarea2").val(answer);
 
+$("#textarea2").val(answer);
+alert(answer);
 $(document).ready(function(){
     $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
