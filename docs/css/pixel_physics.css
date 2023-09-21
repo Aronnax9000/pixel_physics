@@ -15,7 +15,8 @@ BODY {background-color: blue;}
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 0px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(40px, 40px);
+    grid-auto-rows: minmax(40px, 40px);
   }
   .pixelField3x3 {
     /* style */
