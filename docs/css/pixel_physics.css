@@ -10,19 +10,24 @@ BODY {background-color: blue;}
   
   .pixelField6x6 {
   /* style */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-auto-rows: 120px;
-  grid-gap: 0px;
-  place-items: center;
+    border: solid;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0px;
+    grid-auto-columns: repeat(6, 120px);
+    grid-auto-rows: repeat(6, 120px);
   }
   .pixelField3x3 {
+    /* style */
+    border: solid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    grid-auto-rows: 40px;
-    grid-gap: 0px;
-    place-items: center;
-    }
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    grid-auto-columns: repeat(3, 40px);
+    grid-auto-rows: repeat(3, 40px);
+  }
     .pixelField {
     /* style */
     border: solid;
