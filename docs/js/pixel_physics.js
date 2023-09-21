@@ -22,14 +22,14 @@ var pixelFieldLines = [
 ];
 
 
-
+ 
 
 $(document).ready(function(){
     $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
         doSomething();
     });
-    $(".pixelField").append($("P").text("hi there"));
+    $(".pixelField").append($("<P>").text("hi there"));
 });
 
 function parsetext(textareaid) {

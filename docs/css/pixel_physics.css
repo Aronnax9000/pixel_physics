@@ -6,7 +6,7 @@ BODY {background-color: blue;}
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
   }
-
+ 
   
   .pixelField6x6 {
   /* style */
