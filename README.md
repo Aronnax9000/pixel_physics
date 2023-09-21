@@ -4,6 +4,8 @@
 
 A model for thinking about subatomic particles.
 
+# Pixel Field (Jojon)
+
 ## A
 
     0+- +0- +-0 -+0 -0+ 0-+
