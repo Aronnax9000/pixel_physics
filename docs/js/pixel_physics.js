@@ -47,7 +47,7 @@ for (i=0;i<18;i++){
         triplesA.push(linesA[i][j].join());
     }
     var line = triplesA.join(" ");
-    linesA2.push(line)
+    linesA2.push(line);
 }
 var answer = linesA2.join('\n');
 $("#textarea2").val(answer);
