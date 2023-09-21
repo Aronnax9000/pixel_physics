@@ -129,7 +129,7 @@ function doSomething() {
                     case "0":  imageName = "zero"; break;
                     case "+":  imageName = "plus"; break;
                 }
-                divcell.append($("<img>").attr('src', 'img/' + imageName + '.png'));
+                divcell.append($("<img>").attr('src', 'img/' + imageName + '.png').addClass('pixelField'));
               }
             }
         }
