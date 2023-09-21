@@ -20,7 +20,7 @@ var pixelField = [
 "0+- +0- +-0 -+0 -0+ 0-+",
 "-0+ 0-+ 0+- +0- +-0 -+0"
 ];
-
+/*
 
 for (i = 0; i < 18; i++) {
     var currentPixelField = pixelField[i];
@@ -36,3 +36,6 @@ for (i = 0; i < 18; i++) {
     }
 }
 
+*/
+
+$("#pixelPhysics").val(pixelField.join());
