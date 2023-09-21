@@ -40,26 +40,27 @@ for (i = 0; i < 18; i++) {
 }
 
 
-var linesA2 = [];
-for (i=0;i<18;i++){
-    var triplesA = [];
-    for (j = 0; j < 6; j++) {
-        triplesA.push(linesA[i][j].join());
-    }
-    var line = triplesA.join(" ");
-    linesA2.push(line);
-}
-var answer = linesA2.join('\n');
+$("#textarea1").html(pixelFieldLines.join("\n"));
 
-$("#textarea2").html(answer);
-alert(answer);
 $(document).ready(function(){
-    $("#textarea1").html(pixelFieldLines.join("\n"));
+//    $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
         doSomething();
     });
 });
 
 function doSomething() {
-   $("#textarea2").val($("#textarea1").val());
+    var linesA2 = [];
+    for (i=0;i<18;i++){
+        var triplesA = [];
+        for (j = 0; j < 6; j++) {
+            triplesA.push(linesA[i][j].join());
+        }
+        var line = triplesA.join(" ");
+        linesA2.push(line);
+    }
+    var answer = linesA2.join('\n');
+
+    alert(answer);
+    $("#textarea2").html(answer);
 }
