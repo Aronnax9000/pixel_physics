@@ -23,23 +23,23 @@ var pixelFieldLines = [
 
 
 
-$("#textarea1").html(pixelFieldLines.join("\n"));
 
 $(document).ready(function(){
-//    $("#textarea1").html(pixelFieldLines.join("\n"));
+    $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
         doSomething();
     });
 });
 
 function doSomething() {
+    var text = $("#textarea1").val().join('\n');
     var linesA = [];
 
     for (i = 0; i < 18; i++) {
         var lineA = [];
         linesA.push(lineA);
         
-        var triples = pixelFieldLines[i].split(" "); // Array of six three character strings
+        var triples = text[i].split(" "); // Array of six three character strings
         
         for (j = 0; j < 6; j++) {
             var triple = triples[j]; // string of three characters
@@ -63,6 +63,5 @@ function doSomething() {
     }
     var answer = linesA2.join('\n');
 
-    alert(answer);
     $("#textarea2").html(answer);
 }
