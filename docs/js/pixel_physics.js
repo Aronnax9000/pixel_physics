@@ -42,11 +42,12 @@ for (i = 0; i < 18; i++) {
 //$("#pixelPhysics").val(pixelField.join());
 
 $(document).ready(function(){
+    $("#textarea1").html(pixelField.join("\n"));
     $('#theButton').click(function(){
         doSomething();
     });
 });
 
 function doSomething() {
-   $("#theTextArea").html(pixelField.join("\n"));
+   $("#textarea2").val($("#textarea1").val());
 }
