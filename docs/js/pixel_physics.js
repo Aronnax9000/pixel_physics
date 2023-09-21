@@ -71,6 +71,7 @@ function transformTo6633(linesA) {
             row3Matrix.push(linesA[line][triple][letter]);
           }
         }
+      }
     }
     return matrix6633;
 }
