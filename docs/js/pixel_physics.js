@@ -51,7 +51,7 @@ for (i=0;i<18;i++){
 }
 var answer = linesA2.join('\n');
 
-$("#textarea2").val(answer);
+$("#textarea2").html(answer);
 alert(answer);
 $(document).ready(function(){
     $("#textarea1").html(pixelFieldLines.join("\n"));
