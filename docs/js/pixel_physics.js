@@ -109,13 +109,13 @@ function doSomething() {
         var line = triplesA.join(" ");
         linesA2.push(line);
     }
-    var answer = linesA2.join('\n');
+    //var answer = linesA2.join('\n');
 
-    $("#textarea2").html(answer);
+    //$("#textarea2").html(answer);
 
     
     var matrix6633 = transformTo6633(linesA);
-    $("#textarea3").html(matrix6633ToText(matrix6633));
+ //   $("#textarea3").html(matrix6633ToText(matrix6633));
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
             var divcell = $("<div>").addClass('pixelField3x3');
