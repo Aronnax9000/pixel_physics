@@ -65,10 +65,10 @@ function transformTo6633(linesA) {
           var row3Matrix = [];
           col6Matrix.push(row3Matrix);
           for(col3 = 0; col3 < 3; col3++) {
-            var line = row6 * 6 + row3 * 3;
+            var line = (row6 * 6) + (row3 * 3);
             var triple = col6;
             var letter = col3;
-            console.log(line + "," + triple + "," + letter);
+            console.log(row6 + ","  + col3 + "," + line + "," + triple + "," + letter);
             row3Matrix.push(linesA[line][triple][letter]);
           }
         }
