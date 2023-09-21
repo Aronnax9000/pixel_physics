@@ -82,8 +82,8 @@ function matrix6633ToText(matrix6633) {
     var text = "";
     for(line = 0; line < 18; line++) {
         for(letter = 0; letter < 18; letter++) {
-            row6 = Math.floor(line / 6);
-            col6 = letter % 6;
+            row6 = Math.floor(line / 3);
+            col6 = Math.floor(letter / 3);
             row3 = line % 3;
             col3 = letter % 3;
             console.log(row6 + ","  + row3 + "," + col6 + "," + col3);
