@@ -12,11 +12,11 @@ BODY {background-color: blue;}
   /* style */
     border: solid;
     display: grid;
-    grid-template-columns: repeat(6, auto-fit);
-    grid-template-rows: repeat(6, auto-fit);
+    grid-template-columns: repeat(6, 120px);
+    grid-template-rows: repeat(6, 120px);
     gap: 0px;
-    grid-auto-columns: 40px;
-    grid-auto-rows: 40px;
+    grid-auto-columns: 120px;
+    grid-auto-rows: 120px;
   }
   .pixelField3x3 {
     /* style */
