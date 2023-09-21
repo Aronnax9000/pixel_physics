@@ -88,7 +88,7 @@ function matrix6633ToText(matrix6633) {
             col3 = letter % 3;
             console.log(row6 + ","  + row3 + "," + col6 + "," + col3);
             text = text.concat(matrix6633[row6][col6][row3][col3]);
-            if(col6 != 5 && col3 == 2) text = text.concat(" ");
+            if(col6 != 5 && col3 == 2) text = text.concat("   ");
             
         }
         if(line % 3 == 2) text = text.concat("\n");
