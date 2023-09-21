@@ -6,11 +6,11 @@ BODY {background-color: blue;}
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
   }
- 
   
+   
   .pixelField6x6 {
   /* style */
-    width: 720px;
+    width: 800px;
     border: solid;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
