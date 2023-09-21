@@ -32,7 +32,7 @@ $(document).ready(function(){
 });
 
 function doSomething() {
-    var text = $("#textarea1").val().join('\n');
+    var text = $("#textarea1").val().split('\n');
     var linesA = [];
 
     for (i = 0; i < 18; i++) {
