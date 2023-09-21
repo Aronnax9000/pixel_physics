@@ -7,7 +7,7 @@ BODY {background-color: blue;}
     grid-auto-rows: minmax(100px, auto);
   }
   
-  button {width: 40px; height: 40px}
+  button {width: 200px; height: 200px}
    
   .pixelField6x6 {
   /* style */
