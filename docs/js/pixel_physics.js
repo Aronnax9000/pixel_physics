@@ -56,7 +56,7 @@ function doSomething() {
     for (i=0;i<18;i++){
         var triplesA = [];
         for (j = 0; j < 6; j++) {
-            triplesA.push(linesA[i][j].join());
+            triplesA.push(linesA[i][j].join(""));
         }
         var line = triplesA.join(" ");
         linesA2.push(line);
