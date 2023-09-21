@@ -29,7 +29,9 @@ $(document).ready(function(){
     $('#theButton').click(function(){
         doSomething();
     });
-    $(".pixelField").append($("<P>").text("hi there"));
+    for(i = 0; i <18 ; i++) {
+      $(".pixelField6x6").append($("<div>").text("hi there").addClass('pixelField3x3'));
+    }
 });
 
 function parsetext(textareaid) {
