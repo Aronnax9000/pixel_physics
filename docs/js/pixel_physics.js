@@ -39,5 +39,5 @@ for (i = 0; i < 18; i++) {
 }
 
 */
-alert(pixelField.join());
-$("#pixelPhysics").val(pixelField.join());
+//alert(pixelField.join());
+//$("#pixelPhysics").val(pixelField.join());
