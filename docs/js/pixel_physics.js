@@ -27,9 +27,9 @@ var pixelFieldLines = [
 $(document).ready(function(){
     $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
-        doSomething();
+        renderPixelField();
     });
-    doSomething();
+    renderPixelField();
 });
 
 function parsetext(textareaid) {
@@ -98,7 +98,7 @@ function matrix6633ToText(matrix6633) {
     return text;
 }
 
-function doSomething() {
+function renderPixelField() {
     var linesA = parsetext("#textarea1");
     
     var linesA2 = [];
@@ -110,16 +110,13 @@ function doSomething() {
         var line = triplesA.join(" ");
         linesA2.push(line);
     }
-    //var answer = linesA2.join('\n');
 
-    //$("#textarea2").html(answer);
 
     $(".pixelField6x6").empty();
     var matrix6633 = transformTo6633(linesA);
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
-            var divcell = $("<div>").addClass('pixelField3x3');
-            divcell.on('mouseleave', mouseleavehandler);           
+            var divcell = $("<div>").addClass('pixelField3x3');           
             $(".pixelField6x6").append(divcell);
             divcell.append($("<div>").addClass('overlay'));
             for(k = 0; k < 3; k++) {
