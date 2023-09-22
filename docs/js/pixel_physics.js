@@ -21,8 +21,7 @@ var pixelFieldLines = [
 "-0+ 0-+ 0+- +0- +-0 -+0"
 ];
 
-
- 
+var matrix6633;
 
 $(document).ready(function(){
     $("#textarea1").html(pixelFieldLines.join("\n"));
@@ -113,7 +112,7 @@ function renderPixelField() {
 
 
     $(".pixelField6x6").empty();
-    var matrix6633 = transformTo6633(linesA);
+    matrix6633 = transformTo6633(linesA);
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
             var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell');
@@ -165,8 +164,23 @@ function renderPixelField() {
         var target = $(evt.target).closest(".pixelField6x6Cell");
         var row = $(target).data('row');
         var column = $(target).data('column');
-        $(target).css('display', 'none');
+        var pixelField3x3 = matrix6633[row][column];
+        alert("Charge is " + charge(pixelField3x3));
         console.log("click target" + target + " " + row + " " + column);
+    }
+
+    function charge(pixelField3x3) {
+        var charge = 0;
+        for(i = 0; i < 2; i++) {
+            for(j = 0; i < 2; j++) {
+                switch(pixelField3x3[i][j]) {
+                    case '-': charge -= 1; break;
+                    case '+': charge += 1; break;
+                    default: break; // unchanged
+                }
+            }
+        }
+        return charge;
     }
             
 }
