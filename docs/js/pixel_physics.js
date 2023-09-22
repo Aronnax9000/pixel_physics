@@ -147,13 +147,17 @@ function renderPixelField() {
 
     function handlemouseenter(evt) {
         var target = evt.target;
-        $(target).find('.overlay').css('display', 'block');
+        if($(target).hasClass("overlay")) {
+            $(target).css('display', 'block');
+        }
         
       console.log("Enter " + target);
     }
     function handlemouseleave(evt) {
         var target = evt.target;
-        $(target).find('.overlay').css('display', 'none');
+        if($(target).hasClass("overlay")) {
+            $(target).css('display', 'none');
+        }
        console.log("Leave target" + target);
     }
         
