@@ -166,7 +166,6 @@ function renderPixelField() {
         var column = $(target).data('column');
         var pixelField3x3 = matrix6633[row][column];
         alert("Charge is " + charge(pixelField3x3));
-        console.log("click target" + target + " " + row + " " + column);
     }
 
     function charge(pixelField3x3) {
