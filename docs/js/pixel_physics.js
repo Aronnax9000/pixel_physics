@@ -160,8 +160,8 @@ function renderPixelField() {
     }
     function handleclick(evt) {
         var target = $(evt.target).closest(".pixelField6x6Cell");
-        var row = $(target).getStyle('grid-row') - 1;
-        var column = $(target).getStyle('grid-column') - 1;
+        var row = $(target).css('grid-row') - 1;
+        var column = $(target).css('grid-column') - 1;
         $(target).css('display', 'none');
         console.log("click target" + target + " " + row + " " + column);
     }
