@@ -120,8 +120,7 @@ function doSomething() {
             var divcell = $("<div>").addClass('pixelField3x3')
             .on('mouseenter', mouseenterhandler)
             .on('mouseleave', mouseleavehandler);
-
-            $(".pixelField6x6").append(divcell);
+            divcell.append($("<div>").addClass('overlay'));
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
                 var value = matrix6633[i][j][k][l];
@@ -132,9 +131,10 @@ function doSomething() {
                     case "+":  imageName = "plus"; break;
                 }
                 divcell.append($("<img>").attr('src', 'img/' + imageName + '.png').addClass('pixelField'));
-                divcell.append($("<div>").addClass('overlay'));
               }
             }
+            $(".pixelField6x6").append(divcell);
+
         }
     }
 
