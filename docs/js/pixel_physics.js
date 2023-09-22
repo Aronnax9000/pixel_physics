@@ -118,10 +118,9 @@ function doSomething() {
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
             var divcell = $("<div>").addClass('pixelField3x3');
-            divcell.on('mouseenter', mouseenterhandler)
-            .on('mouseleave', mouseleavehandler);           
+            divcell.on('mouseleave', mouseleavehandler);           
             $(".pixelField6x6").append(divcell);
-            divcell.append($("<div>").addClass('overlay'));
+            divcell.append($("<div>").addClass('overlay').on('mouseenter', mouseenterhandler));
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
                 var value = matrix6633[i][j][k][l];
@@ -140,7 +139,7 @@ function doSomething() {
 
     function mouseenterhandler(evt) {
         var target = evt.target;
-        $(target).find('.overlay').css('display', 'block');
+        $(target).css('display', 'block');
         
       console.log(target);
     }
