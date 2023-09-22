@@ -134,7 +134,7 @@ function renderPixelField() {
                     case "+":  imageName = "img/plus.png"; break;
                 }
                 divcell.append($("<img>")
-                  .attr("src", imageName);
+                  .attr("src", imageName)
                   .addClass('pixelField'));
               }
             }
