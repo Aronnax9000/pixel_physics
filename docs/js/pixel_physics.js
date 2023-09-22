@@ -117,7 +117,8 @@ function renderPixelField() {
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
             var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell');
-            pixelField6x6Cell.attr('row', handlemouseenter);
+            pixelField6x6Cell.data('row', i);
+            pixelField6x6Cell.data('column', j);
             
             pixelField6x6Cell.on('mouseenter', handlemouseenter);
             pixelField6x6Cell.on('mouseleave', handlemouseleave);
@@ -162,8 +163,8 @@ function renderPixelField() {
     }
     function handleclick(evt) {
         var target = $(evt.target).closest(".pixelField6x6Cell");
-        var row = $(target).css('grid-row-start');
-        var column = $(target).css('grid-column-start');
+        var row = $(target).data('row');
+        var column = $(target).data('column');
         $(target).css('display', 'none');
         console.log("click target" + target + " " + row + " " + column);
     }
