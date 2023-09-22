@@ -117,6 +117,8 @@ function renderPixelField() {
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
             var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell');
+            pixelField6x6Cell.attr('row', handlemouseenter);
+            
             pixelField6x6Cell.on('mouseenter', handlemouseenter);
             pixelField6x6Cell.on('mouseleave', handlemouseleave);
             pixelField6x6Cell.on('click', handleclick);
