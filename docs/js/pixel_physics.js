@@ -116,22 +116,26 @@ function renderPixelField() {
     var matrix6633 = transformTo6633(linesA);
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
-            var divcell = $("<div>").addClass('pixelField3x3');           
-            $(".pixelField6x6").append(divcell);
-            divcell.append($("<div>").addClass('overlay'));
+            var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell');
+            $(".pixelField6x6").append(pixelField6x6Cell);
+
+            var divcell = $("<div>").addClass('pixelField3x3');  
+            $(pixelField6x6Cell).append(divcell);         
+            var overlaycell = $("<div>").addClass('overlay');           
+            $(pixelField6x6Cell).append(overlaycell);         
+        
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
                 var value = matrix6633[i][j][k][l];
                 var imageName;
                 switch(value) {
-                    case "-":  imageName = "minus"; break;
-                    case "0":  imageName = "zero"; break;
-                    case "+":  imageName = "plus"; break;
+                    case "-":  imageName = "img/minus.png"; break;
+                    case "0":  imageName = "img/zero.png"; break;
+                    case "+":  imageName = "img/plus.png"; break;
                 }
                 divcell.append($("<img>")
-                  .attr('src', 'img/' + imageName + '.png')
-                  .addClass('pixelField')
-                  .on('mouseenter', mouseenterhandler));
+                  .attr("src", imageName);
+                  .addClass('pixelField'));
               }
             }
             

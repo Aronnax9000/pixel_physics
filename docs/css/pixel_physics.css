@@ -26,9 +26,12 @@ button {
     grid-auto-rows: repeat(6, 120px);
   }
 
-
+  .pixelField6x6Cell {
+    border: none;
+  }
   
   .pixelField3x3 {
+    position: absolute;
     border: solid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -43,9 +46,7 @@ button {
   }
 
   .overlay {
-    grid-column: 1 / 4;
-    grid-row: 1 / 4;
-    position: relative;
+    position: absolute;
     display: none;
     width: 100%;
     height: 100%;
