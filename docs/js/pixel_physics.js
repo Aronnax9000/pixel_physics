@@ -132,20 +132,20 @@ function doSomething() {
               }
             }
             
-            divcell.append($("<div>").addClass('overlay'));
-            divcell.on('mouseenter', mouseenterhandler)
-            .on('mouseleave', mouseleavehandler);
+            divcell.append($("<div>").addClass('overlay')
+            .on('mouseenter', mouseenterhandler)
+            .on('mouseleave', mouseleavehandler));
         }
     }
 
     function mouseenterhandler(evt) {
-        var target = evt.target;
-        $(".overlay", target).css('display', 'block');
+        var target = evt.target
+        $(target).css('display', 'block');
       console.log(target);
     }
     function mouseleavehandler(evt) {
         var target = evt.target;
-        $(".overlay", target).css('display', 'none');
+        $(target).css('display', 'none');
        // console.log(evt);
     }
         
