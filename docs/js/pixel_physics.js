@@ -140,14 +140,14 @@ function doSomething() {
     }
 
     function mouseenterhandler(evt) {
-        evt.stopPropagation();
+        evt.preventDefault();
         var target = evt.target;
         $(target).find('.overlay').css('display', 'block');
         
       console.log(target);
     }
     function mouseleavehandler(evt) {
-        evt.stopPropagation();
+        evt.preventDefault();
         var target = evt.target;
         $(target).find('.overlay').css('display', 'none');
        // console.log(evt);
