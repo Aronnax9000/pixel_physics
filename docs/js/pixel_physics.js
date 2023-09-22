@@ -116,10 +116,10 @@ function renderPixelField() {
     var matrix6633 = transformTo6633(linesA);
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
-            var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell')
-            .on('mouseenter', handlemouseenter)
-            .on('mouseleave', handlemouseleave)
-            ;
+            var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell');
+            pixelField6x6Cell.on('mouseenter', handlemouseenter);
+            pixelField6x6Cell.on('mouseleave', handlemouseleave);
+            
             $(".pixelField6x6").append(pixelField6x6Cell);
 
             var divcell = $("<div>").addClass('pixelField3x3');  
@@ -149,12 +149,12 @@ function renderPixelField() {
         var target = evt.target;
         $(target).find('.overlay').css('display', 'block');
         
-      console.log(target);
+      console.log("Enter " + target);
     }
     function handlemouseleave(evt) {
         var target = evt.target;
         $(target).find('.overlay').css('display', 'none');
-       console.log(target);
+       console.log("Leave target" + target);
     }
         
 }
