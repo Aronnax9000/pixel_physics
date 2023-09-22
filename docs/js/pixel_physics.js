@@ -29,6 +29,7 @@ $(document).ready(function(){
     $('#theButton').click(function(){
         doSomething();
     });
+    doSomething();
 });
 
 function parsetext(textareaid) {
@@ -120,7 +121,7 @@ function doSomething() {
             var divcell = $("<div>").addClass('pixelField3x3');
             divcell.on('mouseleave', mouseleavehandler);           
             $(".pixelField6x6").append(divcell);
-            divcell.append($("<div>").addClass('overlay').on('mouseenter', mouseenterhandler));
+            divcell.append($("<div>").addClass('overlay'));
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
                 var value = matrix6633[i][j][k][l];
@@ -130,7 +131,10 @@ function doSomething() {
                     case "0":  imageName = "zero"; break;
                     case "+":  imageName = "plus"; break;
                 }
-                divcell.append($("<img>").attr('src', 'img/' + imageName + '.png').addClass('pixelField'));
+                divcell.append($("<img>")
+                  .attr('src', 'img/' + imageName + '.png')
+                  .addClass('pixelField')
+                  .on('mouseenter', mouseenterhandler));
               }
             }
             
