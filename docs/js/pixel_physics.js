@@ -158,7 +158,7 @@ function renderPixelField() {
         $(target).css('display', 'none');
         //console.log("Leave target" + target);
     }
-    function handlemouseleave(evt) {
+    function handleclick(evt) {
         var target = $(evt.target).closest(".pixelField6x6Cell");
         var row = $(target).getStyle('grid-row') - 1;
         var column = $(target).getStyle('grid-column') - 1;
