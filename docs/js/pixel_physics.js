@@ -132,9 +132,9 @@ function doSomething() {
               }
             }
             
-            divcell.append($("<div>").addClass('overlay')
-            .on('mouseenter', mouseenterhandler)
-            .on('mouseleave', mouseleavehandler));
+            divcell.append($("<div>").addClass('overlay');
+            divcell.on('mouseenter', mouseenterhandler)
+            .on('mouseleave', mouseleavehandler);
         }
     }
 
