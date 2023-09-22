@@ -121,6 +121,7 @@ function doSomething() {
             divcell.on('mouseenter', mouseenterhandler)
             .on('mouseleave', mouseleavehandler);           
             $(".pixelField6x6").append(divcell);
+            divcell.append($("<div>").addClass('overlay'));
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
                 var value = matrix6633[i][j][k][l];
@@ -134,8 +135,6 @@ function doSomething() {
               }
             }
             
-            divcell.append($("<div>").addClass('overlay')
-            );
         }
     }
 
