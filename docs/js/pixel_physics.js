@@ -139,7 +139,7 @@ function doSomething() {
     }
 
     function mouseenterhandler(evt) {
-        var target = evt.target
+        var target = evt.target;
         $(target).css('display', 'block');
       console.log(target);
     }
