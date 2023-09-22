@@ -151,7 +151,7 @@ function renderPixelField() {
         
       console.log(target);
     }
-    function handlemouseenter(evt) {
+    function handlemouseleave(evt) {
         var target = evt.target;
         $(target).find('.overlay').css('display', 'none');
        console.log(target);
