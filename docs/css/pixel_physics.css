@@ -21,7 +21,7 @@ button {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 0px;
+    gap: 5px;
     grid-auto-columns: repeat(6, 120px);
     grid-auto-rows: repeat(6, 120px);
   }
