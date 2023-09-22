@@ -152,14 +152,14 @@ function renderPixelField() {
             $(target).css('display', 'block');
         }
         
-        console.log("Enter " + target);
+        console.log("Enter " + evt);
     }
     function handlemouseleave(evt) {
         var target = evt.target;
         if($(target).hasClass("overlay")) {
             $(target).css('display', 'none');
         }
-        console.log("Leave target" + target);
+        console.log("Leave target" + evt);
     }
         
 }
