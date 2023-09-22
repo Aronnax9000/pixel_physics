@@ -113,9 +113,8 @@ function doSomething() {
 
     //$("#textarea2").html(answer);
 
-    
+    $(".pixelField6x6").empty();
     var matrix6633 = transformTo6633(linesA);
- //   $("#textarea3").html(matrix6633ToText(matrix6633));
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
             var divcell = $("<div>").addClass('pixelField3x3');
