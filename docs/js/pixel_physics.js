@@ -117,10 +117,8 @@ function doSomething() {
     var matrix6633 = transformTo6633(linesA);
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
-            var divcell = $("<div>").addClass('pixelField3x3')
-            .on('mouseenter', mouseenterhandler)
-            .on('mouseleave', mouseleavehandler);
-            divcell.append($("<div>").addClass('overlay'));
+            var divcell = $("<div>").addClass('pixelField3x3')           
+            $(".pixelField6x6").append(divcell);
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
                 var value = matrix6633[i][j][k][l];
@@ -133,8 +131,10 @@ function doSomething() {
                 divcell.append($("<img>").attr('src', 'img/' + imageName + '.png').addClass('pixelField'));
               }
             }
-            $(".pixelField6x6").append(divcell);
-
+            
+            divcell.append($("<div>").addClass('overlay')
+            .on('mouseenter', mouseenterhandler)
+            .on('mouseleave', mouseleavehandler));
         }
     }
 
