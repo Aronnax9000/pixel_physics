@@ -1,16 +1,21 @@
-BODY {background-color: blue;}
+body {
+  background-color: darkorange;
+}
+
+button {
+  width: 200px; 
+  height: 100px; 
+  font-size:large;
+}
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
   }
   
-  button {width: 200px; height: 200px}
-   
-  .pixelField6x6 {
-  /* style */
+.pixelField6x6 {
     border: solid;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -19,8 +24,8 @@ BODY {background-color: blue;}
     grid-auto-columns: repeat(6, 120px);
     grid-auto-rows: repeat(6, 120px);
   }
+  
   .pixelField3x3 {
-    /* style */
     border: solid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -29,7 +34,7 @@ BODY {background-color: blue;}
     grid-auto-columns: repeat(3, 40px);
     grid-auto-rows: repeat(3, 40px);
   }
-    .pixelField {
-    /* style */
+  
+  .pixelField {
     border: none;
   }
