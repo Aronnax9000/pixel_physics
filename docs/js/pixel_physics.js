@@ -122,7 +122,7 @@ function renderPixelField() {
             var divcell = $("<div>").addClass('pixelField3x3');  
             $(pixelField6x6Cell).append(divcell);         
             var overlaycell = $("<div>").addClass('overlay');           
-            $(pixelField6x6Cell).append(overlaycell);         
+            //$(pixelField6x6Cell).append(overlaycell);         
         
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
