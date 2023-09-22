@@ -22,7 +22,7 @@ BODY {background-color: blue;}
   }
   .pixelField3x3 {
     /* style */
-    border: none;
+    border: solid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
