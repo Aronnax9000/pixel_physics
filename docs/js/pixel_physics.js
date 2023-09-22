@@ -140,12 +140,12 @@ function doSomething() {
 
     function mouseenterhandler(evt) {
         var target = evt.target;
-        $("div", target).style.display = "block";
+        $("div", target).css('display', 'block');
       console.log(target);
     }
     function mouseleavehandler(evt) {
         var target = evt.target;
-        $("div", target).style.display = "none";
+        $("div", target).css('display', 'none');
        // console.log(evt);
     }
         
