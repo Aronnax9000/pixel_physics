@@ -143,7 +143,7 @@ function doSomething() {
 
     function mouseenterhandler(evt) {
         var target = evt.target;
-        $(target).css('display', 'block');
+        $(target).parent().find('.overlay').css('display', 'block');
         
       console.log(target);
     }
