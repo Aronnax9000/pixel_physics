@@ -25,7 +25,6 @@ var pixelFieldLines = [
  
 
 $(document).ready(function(){
-    $('body').layout({ applyDefaultStyles: true });
     $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
         doSomething();
