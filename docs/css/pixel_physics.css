@@ -16,7 +16,7 @@ button {
   }
   
 .pixelField6x6 {
-    grid-column 2 / 3
+    grid-column: 2 / 3;
     border: solid;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -25,6 +25,8 @@ button {
     grid-auto-columns: repeat(6, 120px);
     grid-auto-rows: repeat(6, 120px);
   }
+
+
   
   .pixelField3x3 {
     border: solid;
@@ -38,4 +40,18 @@ button {
   
   .pixelField {
     border: none;
+  }
+
+  .overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
   }

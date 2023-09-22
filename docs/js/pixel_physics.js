@@ -138,6 +138,8 @@ function doSomething() {
     }
 
     function mouseenterhandler(evt) {
+        var target = evt.target;
+        
       console.log(evt);
     }
     function mouseleavehandler(evt) {
