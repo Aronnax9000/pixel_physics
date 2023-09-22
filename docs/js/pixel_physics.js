@@ -132,6 +132,7 @@ function doSomething() {
                     case "+":  imageName = "plus"; break;
                 }
                 divcell.append($("<img>").attr('src', 'img/' + imageName + '.png').addClass('pixelField'));
+                divcell.append($("<div>").addClass('overlay'));
               }
             }
         }
@@ -139,11 +140,13 @@ function doSomething() {
 
     function mouseenterhandler(evt) {
         var target = evt.target;
-        
-      console.log(evt);
+        $("div", target).style.display = "block";
+      console.log(target);
     }
     function mouseleavehandler(evt) {
-        console.log(evt);
+        var target = evt.target;
+        $("div", target).style.display = "none";
+       // console.log(evt);
     }
         
 }

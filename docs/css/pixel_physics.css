@@ -29,6 +29,7 @@ button {
 
   
   .pixelField3x3 {
+    position: relative;
     border: solid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
