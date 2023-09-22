@@ -117,7 +117,9 @@ function doSomething() {
     var matrix6633 = transformTo6633(linesA);
     for(i = 0; i < 6 ; i++) {
         for(j = 0; j < 6; j++) {
-            var divcell = $("<div>").addClass('pixelField3x3')           
+            var divcell = $("<div>").addClass('pixelField3x3');
+            divcell.on('mouseenter', mouseenterhandler)
+            .on('mouseleave', mouseleavehandler);           
             $(".pixelField6x6").append(divcell);
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
@@ -133,19 +135,18 @@ function doSomething() {
             }
             
             divcell.append($("<div>").addClass('overlay')
-            .on('mouseenter', mouseenterhandler)
-            .on('mouseleave', mouseleavehandler));
+            );
         }
     }
 
     function mouseenterhandler(evt) {
         var target = evt.target;
-        $(target).css('display', 'block');
+        $(target).find('.overlay').css('display', 'block');
       console.log(target);
     }
     function mouseleavehandler(evt) {
         var target = evt.target;
-        $(target).css('display', 'none');
+        $(target).find('.overlay').css('display', 'none');
        // console.log(evt);
     }
         
