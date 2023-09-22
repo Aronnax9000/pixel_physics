@@ -146,20 +146,15 @@ function renderPixelField() {
     }
 
     function handlemouseenter(evt) {
-        var target = evt.target;
-
-        if($(target).hasClass("overlay")) {
-            $(target).css('display', 'block');
-        }
+        var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
+        $(target).css('display', 'block');
         
-        console.log("Enter " + evt);
+        console.log("Enter " + target);
     }
     function handlemouseleave(evt) {
-        var target = evt.target;
-        if($(target).hasClass("overlay")) {
-            $(target).css('display', 'none');
-        }
-        console.log("Leave target" + evt);
+        var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
+        $(target).css('display', 'none');
+        console.log("Leave target" + target);
     }
         
 }
