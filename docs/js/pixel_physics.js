@@ -168,26 +168,29 @@ function renderPixelField() {
     function handleclick(evt) {
         evt.preventDefault();
         var pixelField6x6Cell = $(evt.target).closest(".pixelField6x6Cell")
+        if(pixelField6x6Cell === undefined)
+            return;
+
         var target = pixelField6x6Cell.find('.selection_overlay');
-        if($(target).css('display') == 'block') {
-            $(target).css('display', 'none');
+            if($(target).css('display') == 'block') {
+            var row = $(pixelField6x6Cell).data('row');
+            var column = $(pixelField6x6Cell).data('column');
+            if(row === undefined || column === undefined) {   
+                console.log("click target undefined");
+                return;  
+            } else {
+                console.log("click target" + target + " " + row + " " + column);
+                var pixelField3x3 = matrix6633[row][column];
+                var q = charge(pixelField3x3);
+                alert("Charge is " + q);
+            }
         } else {
             
             pixelField6x6Cell.parent().find('.selection_overlay').css('display', 'none');
             $(target).css('display', 'block');
         }
 
-        var row = $(target).data('row');
-        var column = $(target).data('column');
-        if(row === undefined || column === undefined) {   
-            console.log("click target undefined");
-            return;  
-        } else {
-            console.log("click target" + target + " " + row + " " + column);
-            var pixelField3x3 = matrix6633[row][column];
-            var q = charge(pixelField3x3);
-            // alert("Charge  is " + q);
-        }
+        
         
     }
 
