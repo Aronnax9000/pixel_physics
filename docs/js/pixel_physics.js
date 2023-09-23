@@ -166,17 +166,17 @@ function renderPixelField() {
     function handleclick(evt) {
         evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell");
-        if($(target.hasClass('selected'))) {
-            target.find('.overlay').removeClass('selected');
+        if($(target).hasClass('selected')) {
+            $(target).find('.overlay').removeClass('selected');
         } else {
-            target.find('.overlay').addClass('selected');
+            $(target).find('.overlay').addClass('selected');
         }
         var row = $(target).data('row');
         var column = $(target).data('column');
         console.log("click target" + target + " " + row + " " + column);
         var pixelField3x3 = matrix6633[row][column];
         var q = charge(pixelField3x3);
-        alert("Charge  is " + q);
+        // alert("Charge  is " + q);
     }
 
     function charge(field3x3) {
