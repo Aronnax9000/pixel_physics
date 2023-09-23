@@ -167,9 +167,9 @@ function renderPixelField() {
         evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell");
         if($(target.hasClass('selected'))) {
-            target.removeClass('selected');
+            target.find('.overlay').removeClass('selected');
         } else {
-            target.addClass('selected');
+            target.find('.overlay').addClass('selected');
         }
         var row = $(target).data('row');
         var column = $(target).data('column');
