@@ -167,14 +167,14 @@ function renderPixelField() {
         console.log("click target" + target + " " + row + " " + column);
         var pixelField3x3 = matrix6633[row][column];
         var q = charge(pixelField3x3);
-        alert("Charge is " + q);
+        alert("Charge  is " + q);
     }
 
-    function charge(pixelField3x3) {
+    function charge(field3x3) {
         var total = 0;
         for(i = 0; i < 2; i++) {
             for(j = 0; j < 2; j++) {
-                switch(pixelField3x3[i][j]) {
+                switch(field3x3[i][j]) {
                     case '-': total -= 1; break;
                     case '+': total += 1; break;
                     default: break; // unchanged
