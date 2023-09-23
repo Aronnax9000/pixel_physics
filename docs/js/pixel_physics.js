@@ -161,7 +161,7 @@ function renderPixelField() {
         evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
         $(target).css('display', 'none');
-        //console.log("Leave target" + target);
+        console.log("Leave target" + target);
     }
     function handleclick(evt) {
         evt.preventDefault();
