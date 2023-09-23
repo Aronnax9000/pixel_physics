@@ -121,7 +121,8 @@ function renderPixelField() {
             
             pixelField6x6Cell.on('mouseenter', handlemouseenter);
             pixelField6x6Cell.on('mouseleave', handlemouseleave);
-            pixelField6x6Cell.on('touchend', handleclick);
+            pixelField6x6Cell.on('touchstart', handleclick);
+            pixelField6x6Cell.on('click', handleclick);
             
             
             $(".pixelField6x6").append(pixelField6x6Cell);
@@ -165,7 +166,7 @@ function renderPixelField() {
     function handleclick(evt) {
         evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell");
-        if$(target.hasClass('selected')) {
+        if($(target.hasClass('selected'))) {
             target.removeClass('selected'());
         } else {
             target.addClass('selected'());
