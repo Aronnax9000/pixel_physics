@@ -119,8 +119,8 @@ function renderPixelField() {
             pixelField6x6Cell.data('row', i);
             pixelField6x6Cell.data('column', j);
             
-            //pixelField6x6Cell.on('mouseenter', handlemouseenter);
-            //pixelField6x6Cell.on('mouseleave', handlemouseleave);
+            pixelField6x6Cell.on('mouseenter', handlemouseenter);
+            pixelField6x6Cell.on('mouseleave', handlemouseleave);
             pixelField6x6Cell.on('touchend', handleclick);
             
             
@@ -150,18 +150,26 @@ function renderPixelField() {
     }
 
     function handlemouseenter(evt) {
+        evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
         $(target).css('display', 'block');
         
         // console.log("Enter " + target);
     }
     function handlemouseleave(evt) {
+        evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
         $(target).css('display', 'none');
         //console.log("Leave target" + target);
     }
     function handleclick(evt) {
+        evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell");
+        if$(target.hasClass('selected')) {
+            target.removeClass('selected'());
+        } else {
+            target.addClass('selected'());
+        }
         var row = $(target).data('row');
         var column = $(target).data('column');
         console.log("click target" + target + " " + row + " " + column);

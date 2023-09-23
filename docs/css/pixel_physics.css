@@ -61,3 +61,7 @@ button {
     z-index: 2;
     cursor: pointer;
   }
+
+  .overlay.selected {
+    background-color: rgba(255,255,0,0.5);
+  }
