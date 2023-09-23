@@ -164,6 +164,7 @@ function renderPixelField() {
         var target = $(evt.target).closest(".pixelField6x6Cell");
         var row = $(target).data('row');
         var column = $(target).data('column');
+        console.log("click target" + target + " " + row + " " + column);
         var pixelField3x3 = matrix6633[row][column];
         alert("Charge is " + charge(pixelField3x3));
     }
