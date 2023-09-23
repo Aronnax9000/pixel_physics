@@ -165,11 +165,11 @@ function renderPixelField() {
     }
     function handleclick(evt) {
         evt.preventDefault();
-        var target = $(evt.target).closest(".pixelField6x6Cell");
+        var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
         if($(target).hasClass('selected')) {
-            $(target).find('.overlay').removeClass('selected').css('display', 'block');
+            $(target).removeClass('selected').css('display', 'none');
         } else {
-            $(target).find('.overlay').addClass('selected').css('display', 'none');
+            $(target).addClass('selected').css('display', 'block');
         }
         var row = $(target).data('row');
         var column = $(target).data('column');
