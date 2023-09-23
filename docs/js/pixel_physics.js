@@ -181,7 +181,7 @@ function renderPixelField() {
                 }
             }
         }
-        return charge;
+        return total;
     }
             
 }
