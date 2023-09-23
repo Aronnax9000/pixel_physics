@@ -129,7 +129,8 @@ function renderPixelField() {
 
             var divcell = $("<div>").addClass('pixelField3x3');  
             $(pixelField6x6Cell).append(divcell);         
-            var overlaycell = $("<div>").addClass('overlay');           
+            var overlaycell = $("<div>").addClass('selection_overlay');           
+            var overlaycell = $("<div>").addClass('hover_overlay');           
             $(pixelField6x6Cell).append(overlaycell);         
         
             for(k = 0; k < 3; k++) {
@@ -152,24 +153,24 @@ function renderPixelField() {
 
     function handlemouseenter(evt) {
         evt.preventDefault();
-        var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
+        var target = $(evt.target).closest(".pixelField6x6Cell").find('.hover_overlay');
         $(target).css('display', 'block');
         
         // console.log("Enter " + target);
     }
     function handlemouseleave(evt) {
         evt.preventDefault();
-        var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
+        var target = $(evt.target).closest(".pixelField6x6Cell").find('.hover_overlay');
         $(target).css('display', 'none');
         console.log("Leave target" + target);
     }
     function handleclick(evt) {
         evt.preventDefault();
-        var target = $(evt.target).closest(".pixelField6x6Cell").find('.overlay');
-        if($(target).hasClass('selected')) {
-            $(target).removeClass('selected').css('display', 'none');
+        var target = $(evt.target).closest(".pixelField6x6Cell").find('.selection_overlay');
+        if($(target).css('display') == 'block') {
+            $(target).css('display', 'none');
         } else {
-            $(target).addClass('selected').css('display', 'block');
+            $(target).css('display', 'block');
         }
         var row = $(target).data('row');
         var column = $(target).data('column');
