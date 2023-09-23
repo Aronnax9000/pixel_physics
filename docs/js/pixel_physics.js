@@ -174,9 +174,11 @@ function renderPixelField() {
         var row = $(target).data('row');
         var column = $(target).data('column');
         console.log("click target" + target + " " + row + " " + column);
+        if(row !=== undefined && column !=== undefined) {
         var pixelField3x3 = matrix6633[row][column];
         var q = charge(pixelField3x3);
         // alert("Charge  is " + q);
+        }
     }
 
     function charge(field3x3) {
