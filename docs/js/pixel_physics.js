@@ -121,7 +121,7 @@ function renderPixelField() {
             
             //pixelField6x6Cell.on('mouseenter', handlemouseenter);
             //pixelField6x6Cell.on('mouseleave', handlemouseleave);
-            pixelField6x6Cell.on('tap', handleclick);
+            pixelField6x6Cell.on('touchstart', handleclick);
             
             
             $(".pixelField6x6").append(pixelField6x6Cell);
