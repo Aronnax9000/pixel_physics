@@ -170,17 +170,17 @@ function renderPixelField() {
     }
 
     function charge(pixelField3x3) {
-        var charge = 0;
+        var total = 0;
         for(i = 0; i < 2; i++) {
             for(j = 0; i < 2; j++) {
                 switch(pixelField3x3[i][j]) {
-                    case '-': charge -= 1; break;
-                    case '+': charge += 1; break;
+                    case '-': total -= 1; break;
+                    case '+': total += 1; break;
                     default: break; // unchanged
                 }
             }
         }
-        return charge;
+        return total;
     }
             
 }
