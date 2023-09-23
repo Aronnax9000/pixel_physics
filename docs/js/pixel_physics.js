@@ -167,12 +167,16 @@ function renderPixelField() {
     }
     function handleclick(evt) {
         evt.preventDefault();
-        var target = $(evt.target).closest(".pixelField6x6Cell").find('.selection_overlay');
+        var pixelField6x6Cell = $(evt.target).closest(".pixelField6x6Cell")
+        var target = pixelField6x6Cell.find('.selection_overlay');
         if($(target).css('display') == 'block') {
             $(target).css('display', 'none');
         } else {
+            
+            pixelField6x6Cell.parent().find('.selection_overlay').css('display', 'none');
             $(target).css('display', 'block');
         }
+
         var row = $(target).data('row');
         var column = $(target).data('column');
         if(row === undefined || column === undefined) {   
