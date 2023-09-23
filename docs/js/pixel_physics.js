@@ -129,9 +129,10 @@ function renderPixelField() {
 
             var divcell = $("<div>").addClass('pixelField3x3');  
             $(pixelField6x6Cell).append(divcell);         
-            var overlaycell = $("<div>").addClass('selection_overlay');           
-            var overlaycell = $("<div>").addClass('hover_overlay');           
-            $(pixelField6x6Cell).append(overlaycell);         
+            var selection_overlay = $("<div>").addClass('selection_overlay');                     
+            $(pixelField6x6Cell).append(selection_overlay);         
+            var hover_overlay = $("<div>").addClass('hover_overlay');           
+            $(pixelField6x6Cell).append(hover_overlay);         
         
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
@@ -174,10 +175,11 @@ function renderPixelField() {
         }
         var row = $(target).data('row');
         var column = $(target).data('column');
-        console.log("click target" + target + " " + row + " " + column);
         if(row === undefined || column === undefined) {   
+            console.log("click target undefined");
             return;  
         } else {
+            console.log("click target" + target + " " + row + " " + column);
             var pixelField3x3 = matrix6633[row][column];
             var q = charge(pixelField3x3);
             // alert("Charge  is " + q);
