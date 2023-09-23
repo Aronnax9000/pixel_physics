@@ -119,8 +119,8 @@ function renderPixelField() {
             pixelField6x6Cell.data('row', i);
             pixelField6x6Cell.data('column', j);
             
-            pixelField6x6Cell.on('mouseenter', handlemouseenter);
-            pixelField6x6Cell.on('mouseleave', handlemouseleave);
+            //pixelField6x6Cell.on('mouseenter', handlemouseenter);
+            //pixelField6x6Cell.on('mouseleave', handlemouseleave);
             pixelField6x6Cell.on('tap', handleclick);
             
             
