@@ -113,11 +113,12 @@ function renderPixelField() {
 
     $(".pixelField6x6").empty();
     matrix6633 = transformTo6633(linesA);
-    for(i = 0; i < 6 ; i++) {
-        for(j = 0; j < 6; j++) {
+    for(row = 0; row < 6 ; row++) {
+        for(column = 0; column < 6; column++) {
             var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell');
-            pixelField6x6Cell.data('row', i);
-            pixelField6x6Cell.data('column', j);
+            pixelField6x6Cell.data('row', row);
+            pixelField6x6Cell.data('column', column);
+            pixelField6x6Cell.data('pixelField3x3', matrix6633[row][column] );
             
             pixelField6x6Cell.on('mouseenter', handlemouseenter);
 //            pixelField6x6Cell.on('mouseleave', handlemouseleave);
@@ -133,10 +134,12 @@ function renderPixelField() {
             $(pixelField6x6Cell).append(selection_overlay);         
             var hover_overlay = $("<div>").addClass('hover_overlay');           
             $(pixelField6x6Cell).append(hover_overlay);         
+            var hover_overlay = $("<div>").addClass('equals_overlay');           
+            $(pixelField6x6Cell).append(equals_overlay);         
         
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
-                var value = matrix6633[i][j][k][l];
+                var value = matrix6633[row][column][k][l];
                 var imageName;
                 switch(value) {
                     case "-":  imageName = "img/minus.png"; break;
@@ -159,12 +162,21 @@ function renderPixelField() {
         target.closest(".pixelField6x6")
             .find('.hover_overlay')
             .css('display', 'none');
-        // Turn on hover overlay for hovered cell
-        target.closest(".pixelField6x6Cell")
-            .find('.hover_overlay')
+        // Which cell is hovered over?
+        var hovered_cell = target.closest(".pixelField6x6Cell");
+            // Turn on hover overlay for hovered cell
+            hovered_cell.find('.hover_overlay')
             .css('display', 'block');
         // Highlight equal 3x3 grids
-
+        target.closest(".pixelField6x6")
+            .find('.pixelField6x6Cell')
+            .each( function() {
+                if(this.find('.hover_overlay').css('display') != 'block') {
+                    if(pixelField6x6CellEquals(this, hovered_cell)) {
+                        this.find('.equals_overlay').css('display', 'block');                        
+                    }
+                }
+            });
         // console.log("Enter " + target);
     }
     function handlemouseleave(evt) {
@@ -213,8 +225,15 @@ function renderPixelField() {
         return total;
     }
 
-    function comparePixelGridAt(pixelField3x3, k, l) {
+    function getPixelGridFrom6x6Cell(pixelField6x6Cell) {
+        return pixelField6x6Cell.data('pixelField3x3');
+    } 
 
+    function pixelField6x6CellEquals(pixelField6x6Cell1, pixelField6x6Cell2) {
+        return pixelGridEquals(
+            getPixelGridFrom6x6Cell(pixelField6x6Cell1),
+            getPixelGridFrom6x6Cell(pixelField6x6Cell2)
+        );
     }
 
     function pixelGridEquals(grid0, grid1) {
