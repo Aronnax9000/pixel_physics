@@ -1,5 +1,6 @@
 body {
   background-color: darkorange;
+  font-family: sans-serif;
 }
 
 .header {
@@ -8,7 +9,6 @@ body {
 }
 
 .topbartitle {
-  font-family: sans-serif;
 }
 
 button {
