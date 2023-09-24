@@ -263,7 +263,7 @@ function renderPixelField() {
     function pixelGridEquals(grid0, grid1) {
         for(row = 0; row < 3; row++) {
             for(column = 0; column < 3; column++) {
-                if(grid0[row][column] != grid1[row]][column])
+                if(grid0[row][column] != grid1[row][column])
                   return false; 
             }
         }
