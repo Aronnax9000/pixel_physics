@@ -171,9 +171,9 @@ function renderPixelField() {
         $(target).closest(".pixelField6x6")
             .find('.pixelField6x6Cell')
             .each( function() {
-                if(this.find('.hover_overlay').css('display') != 'block') {
+                if($(this).find('.hover_overlay').css('display') != 'block') {
                     if(pixelField6x6CellEquals(this, hovered_cell)) {
-                        this.find('.equals_overlay').css('display', 'block');                        
+                        $(this).find('.equals_overlay').css('display', 'block');                        
                     }
                 }
             });
