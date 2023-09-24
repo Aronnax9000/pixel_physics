@@ -154,10 +154,17 @@ function renderPixelField() {
 
     function handlemouseenter(evt) {
         evt.preventDefault();
-        var target = $(evt.target).closest(".pixelField6x6Cell").find('.hover_overlay');
-        target.parent().find('.pixelField6x6Cell').css('display', 'none');
-        $(target).css('display', 'block');
-        
+        var target = evt.target;
+        // Turn off all hover overlays
+        target.closest(".pixelField6x6")
+            .find('.hover_overlay')
+            .css('display', 'none');
+        // Turn on hover overlay for hovered cell
+        target.closest(".pixelField6x6Cell")
+            .find('.hover_overlay')
+            .css('display', 'block');
+        // Highlight equal 3x3 grids
+
         // console.log("Enter " + target);
     }
     function handlemouseleave(evt) {
