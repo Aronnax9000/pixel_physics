@@ -154,21 +154,27 @@ function renderPixelField() {
             
         }
     }
+    function pixelField6x6TurnOffHoverAndEquals(theElement) {
+        $(theElement)
+            .closest('pixelField6x6')
+            .find('.hover_overlay, .equals_overlay')
+            .css('display', 'none');
+        return pixelField6x6;
+    }
+
 
     function handlemouseenter(evt) {
         evt.preventDefault();
         var target = evt.target;
         // Turn off all hover overlays
-        $(target).closest(".pixelField6x6")
-            .find('.hover_overlay')
-            .css('display', 'none');
+        var pixelField6x6 = pixelField6x6TurnOffHoverAndEquals(target);
         // Which cell is hovered over?
         var hovered_cell = $(target).closest(".pixelField6x6Cell");
-            // Turn on hover overlay for hovered cell
-            $(hovered_cell).find('.hover_overlay')
+        // Turn on hover overlay for hovered cell
+        $(hovered_cell).find('.hover_overlay')
             .css('display', 'block');
         // Highlight equal 3x3 grids
-        $(target).closest(".pixelField6x6")
+        $(pixelField6x6)
             .find('.pixelField6x6Cell')
             .each( function() {
                 if($(this).find('.hover_overlay').css('display') != 'block') {
@@ -188,24 +194,23 @@ function renderPixelField() {
     function handleclick(evt) {
         evt.preventDefault();
         var pixelField6x6Cell = $(evt.target).closest(".pixelField6x6Cell")
-        if(pixelField6x6Cell === undefined)
+        if(pixelField6x6Cell === undefined) {
             return;
+        }
+        var pixelField6x6 = pixelField6x6TurnOffHoverAndEquals(pixelField6x6Cell);
 
         var target = pixelField6x6Cell.find('.selection_overlay');
             if($(target).css('display') == 'block') {
-            var row = $(pixelField6x6Cell).data('row');
-            var column = $(pixelField6x6Cell).data('column');
-            if(row === undefined || column === undefined) {   
-                console.log("click target undefined");
+            var pixelField3x3 = $(pixelField6x6Cell).data('pixelField3x3');
+            if(pixelField3x3 === undefined) {   
+                console.log("click target has no pixelField3x3");
                 return;  
             } else {
                 console.log("click target" + target + " " + row + " " + column);
-                var pixelField3x3 = matrix6633[row][column];
                 var q = charge(pixelField3x3);
                 alert("Charge is " + q);
             }
         } else {
-            
             pixelField6x6Cell.parent().find('.selection_overlay').css('display', 'none');
             $(target).css('display', 'block');
         }
