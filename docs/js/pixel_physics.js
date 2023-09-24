@@ -162,7 +162,7 @@ function renderPixelField() {
      */
     function pixelField6x6TurnOffHoverAndEquals(theElement) {
         var pixelField6x6 = $(theElement)
-            .closest('pixelField6x6');
+            .closest('.pixelField6x6');
         
         $(pixelField6x6)
             .find('.hover_overlay, .equals_overlay')
