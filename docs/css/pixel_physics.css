@@ -7,7 +7,7 @@ button {
   height: 100px; 
   font-size:large;
 }
-
+.ui-menu { width: 150px; }
 .pixelField6x6 {
     width: 769px;
     padding: 5px;
