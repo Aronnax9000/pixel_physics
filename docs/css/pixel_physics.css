@@ -2,6 +2,11 @@ body {
   background-color: darkorange;
 }
 
+.header {
+  display: inline;
+  width: 100%
+}
+
 button {
   width: 200px; 
   height: 100px; 
