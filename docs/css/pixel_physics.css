@@ -7,6 +7,10 @@ body {
   width: 100%
 }
 
+.topbartitle {
+  font-family: sans-serif;
+}
+
 button {
   width: 200px; 
   height: 100px; 
