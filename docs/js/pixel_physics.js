@@ -134,7 +134,7 @@ function renderPixelField() {
             $(pixelField6x6Cell).append(selection_overlay);         
             var hover_overlay = $("<div>").addClass('hover_overlay');           
             $(pixelField6x6Cell).append(hover_overlay);         
-            var hover_overlay = $("<div>").addClass('equals_overlay');           
+            var equals_overlay = $("<div>").addClass('equals_overlay');           
             $(pixelField6x6Cell).append(equals_overlay);         
         
             for(k = 0; k < 3; k++) {
