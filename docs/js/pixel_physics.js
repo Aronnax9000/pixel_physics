@@ -181,17 +181,24 @@ function renderPixelField() {
         // Turn on hover overlay for hovered cell
         $(hovered_cell).find('.hover_overlay')
             .css('display', 'block');
-        // Highlight equal 3x3 grids
-        $(pixelField6x6)
-            .find('.pixelField6x6Cell')
-            .each( function() {
-                if($(this).find('.hover_overlay').css('display') != 'block') {
-                    if(pixelField6x6CellEquals(this, hovered_cell)) {
-                        $(this).find('.equals_overlay').css('display', 'block');                        
-                    }
-                }
-            });
+        highlightEqual3x3Grids(hovered_cell); 
         // console.log("Enter " + target);
+    }
+
+    function highlightEqual3x3Grids(hovered_cell) {
+        pixelField6x6 = $(hovered_cell)
+        .closest('.pixelField6x6');
+                // Highlight equal 3x3 grids
+                $(pixelField6x6)
+                    .find('.pixelField6x6Cell')
+                    .each( function() {
+                        if($(this).find('.hover_overlay').css('display') != 'block') {
+                            if(pixelField6x6CellEquals(this, hovered_cell)) {
+                            $(this).find('.equals_overlay').css('display', 'block');                        
+                        }
+                    }
+                });
+    
     }
     function handlemouseleave(evt) {
         evt.preventDefault();
