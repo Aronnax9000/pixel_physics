@@ -16,8 +16,8 @@ button {
   }
   
 .pixelField6x6 {
-    width: 781;
-/*    padding: 5px; */
+    width: 769;
+    padding: 5px;
     grid-column: 1 / 2;
     border: solid;
 
@@ -41,8 +41,8 @@ button {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 0px;
-    grid-auto-columns: repeat(3, 40px);
-    grid-auto-rows: repeat(3, 40px);
+    grid-auto-columns: repeat(3, 42px);
+    grid-auto-rows: repeat(3, 42px);
   }
   
   .pixelField {
