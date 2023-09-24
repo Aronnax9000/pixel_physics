@@ -24,7 +24,7 @@ var pixelFieldLines = [
 var matrix6633;
 
 $(document).ready(function(){
-    $("#textDialog").dialog({autoOpen: false, });
+    $("#textDialog").dialog({autoOpen: false });
 
     $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
