@@ -20,6 +20,7 @@ button {
     padding: 5px;
     grid-column: 1 / 2;
     border: solid;
+    border-width: 1px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -36,6 +37,7 @@ button {
   .pixelField3x3 {
     position: inline;
     border: solid;
+    border-width: 1px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
