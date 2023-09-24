@@ -159,16 +159,16 @@ function renderPixelField() {
         evt.preventDefault();
         var target = evt.target;
         // Turn off all hover overlays
-        target.closest(".pixelField6x6")
+        $(target).closest(".pixelField6x6")
             .find('.hover_overlay')
             .css('display', 'none');
         // Which cell is hovered over?
-        var hovered_cell = target.closest(".pixelField6x6Cell");
+        var hovered_cell = $(target).closest(".pixelField6x6Cell");
             // Turn on hover overlay for hovered cell
-            hovered_cell.find('.hover_overlay')
+            $(hovered_cell).find('.hover_overlay')
             .css('display', 'block');
         // Highlight equal 3x3 grids
-        target.closest(".pixelField6x6")
+        $(target).closest(".pixelField6x6")
             .find('.pixelField6x6Cell')
             .each( function() {
                 if(this.find('.hover_overlay').css('display') != 'block') {
