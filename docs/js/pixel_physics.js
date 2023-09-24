@@ -154,9 +154,17 @@ function renderPixelField() {
             
         }
     }
+    /**
+     * Turn off the hover and equals overlays for every cell in the 6x6 grid.
+     * 
+     * @param {*} theElement an element inside the grid div
+     * @returns the element representing the grid div.
+     */
     function pixelField6x6TurnOffHoverAndEquals(theElement) {
-        $(theElement)
-            .closest('pixelField6x6')
+        var pixelField6x6 = $(theElement)
+            .closest('pixelField6x6');
+        
+        $(pixelField6x6)
             .find('.hover_overlay, .equals_overlay')
             .css('display', 'none');
         return pixelField6x6;
