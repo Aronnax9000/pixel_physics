@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-  display: inline;
+  display: block inline;
   width: 100%
 }
 
