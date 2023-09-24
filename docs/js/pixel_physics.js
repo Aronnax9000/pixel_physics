@@ -228,6 +228,7 @@ function renderPixelField() {
         } else {
             pixelField6x6Cell.parent().find('.selection_overlay').css('display', 'none');
             $(target).css('display', 'block');
+            highlightEqual3x3Grids(pixelField6x6Cell)
         }
     }
 
