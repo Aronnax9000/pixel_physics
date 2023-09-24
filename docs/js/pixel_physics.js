@@ -226,7 +226,7 @@ function renderPixelField() {
     }
 
     function getPixelGridFrom6x6Cell(pixelField6x6Cell) {
-        return pixelField6x6Cell.data('pixelField3x3');
+        return $(pixelField6x6Cell).data('pixelField3x3');
     } 
 
     function pixelField6x6CellEquals(pixelField6x6Cell1, pixelField6x6Cell2) {
