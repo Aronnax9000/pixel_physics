@@ -120,7 +120,7 @@ function renderPixelField() {
             pixelField6x6Cell.data('column', j);
             
             pixelField6x6Cell.on('mouseenter', handlemouseenter);
-            pixelField6x6Cell.on('mouseleave', handlemouseleave);
+//            pixelField6x6Cell.on('mouseleave', handlemouseleave);
             pixelField6x6Cell.on('touchstart', handleclick);
             pixelField6x6Cell.on('click', handleclick);
             
@@ -155,6 +155,7 @@ function renderPixelField() {
     function handlemouseenter(evt) {
         evt.preventDefault();
         var target = $(evt.target).closest(".pixelField6x6Cell").find('.hover_overlay');
+        target.parent().find('.pixelField6x6Cell').css('display', 'none');
         $(target).css('display', 'block');
         
         // console.log("Enter " + target);
@@ -189,9 +190,6 @@ function renderPixelField() {
             pixelField6x6Cell.parent().find('.selection_overlay').css('display', 'none');
             $(target).css('display', 'block');
         }
-
-        
-        
     }
 
     function charge(field3x3) {
@@ -207,5 +205,19 @@ function renderPixelField() {
         }
         return total;
     }
-            
+
+    function comparePixelGridAt(pixelField3x3, k, l) {
+
+    }
+
+    function pixelGridEquals(grid0, grid1) {
+        for(k = 0; k < 3; k++) {
+            for(l = 0; l < 3; l++) {
+                if(grid0[k][l] != grid1[k][l])
+                  return false; 
+            }
+        }
+        return true;
+    }  
+
 }
