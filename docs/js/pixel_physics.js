@@ -254,12 +254,7 @@ function renderPixelField() {
                 });
     
     }
-    function handlemouseleave(evt) {
-        evt.preventDefault();
-        var target = $(evt.target).closest(".pixelField6x6Cell").find('.hover_overlay');
-        $(target).css('display', 'none');
-        console.log("Leave target" + target);
-    }
+
     function handleclick(evt) {
         evt.preventDefault();
         var pixelField6x6Cell = $(evt.target).closest(".pixelField6x6Cell")
@@ -278,9 +273,9 @@ function renderPixelField() {
                 console.log("click target" + target + " " + row + " " + column);
                 $("#q").html(charge(pixelField3x3));
                 var row = pixelField6x6Cell.data("row");
-                $("#row").html(row);
+                $("#row").html("abcdef".substring(row, row+1);
                 var column = pixelField6x6Cell.data("column");
-                $("#column").html(column);
+                $("#column").html(column + 1);
                 
                 build3x3($("#3x3editor"), row, column)
                 $("#edit3x3Dialog").dialog("open");
