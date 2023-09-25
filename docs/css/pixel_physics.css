@@ -54,7 +54,8 @@ a.ui-state-focus {
     position: relative;
   }
   
-  .pixelField3x3 {
+.pixelField3x3 {
+    text-align: center;
     width: 122;
     position: inline;
     border: solid;
