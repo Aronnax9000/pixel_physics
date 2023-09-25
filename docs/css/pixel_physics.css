@@ -13,6 +13,7 @@ a.ui-state-focus {
     display: inline-block;
 }
 .ui-menu, .ui-menu-item { 
+  text-align: right;
   width: 82px;
   background-color: darkorange;
 }
