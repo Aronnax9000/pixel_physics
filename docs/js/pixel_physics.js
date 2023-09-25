@@ -59,6 +59,20 @@ $(document).ready(function(){
 function initModel() {
     var text = pixelFieldLines.join("\n")
     $("#textarea1").html(text);
+    var linesA = parsetext(text);
+    
+    var linesA2 = [];
+    for (i=0;i<18;i++){
+        var triplesA = [];
+        for (j = 0; j < 6; j++) {
+            triplesA.push(linesA[i][j].join(""));
+        }
+        var line = triplesA.join(" ");
+        linesA2.push(line);
+    }
+
+
+    matrix6633 = transformTo6633(linesA);    
 }
 
 function menuAboutClick() { 
@@ -123,7 +137,6 @@ function matrix6633ToText(matrix6633) {
             col6 = Math.floor(letter / 3);
             row3 = line % 3;
             col3 = letter % 3;
-//            console.log(row6 + ","  + row3 + "," + col6 + "," + col3);
             text = text.concat(matrix6633[row6][col6][row3][col3]);
             if(col6 != 5 && col3 == 2) text = text.concat(" ");
             
@@ -134,21 +147,8 @@ function matrix6633ToText(matrix6633) {
 }
 
 function renderPixelField() {
-    var linesA = parsetext("#textarea1");
-    
-    var linesA2 = [];
-    for (i=0;i<18;i++){
-        var triplesA = [];
-        for (j = 0; j < 6; j++) {
-            triplesA.push(linesA[i][j].join(""));
-        }
-        var line = triplesA.join(" ");
-        linesA2.push(line);
-    }
-
-
     $(".pixelField6x6").empty();
-    matrix6633 = transformTo6633(linesA);
+
     for(row = 0; row < 6 ; row++) {
         for(column = 0; column < 6; column++) {
             var pixelField6x6Cell = $("<div>").addClass('pixelField6x6Cell');
