@@ -123,11 +123,11 @@ button {
     cursor: pointer;
   }
 
-  #textarea1 {
+#textarea1 {
     font-family: monospace;
   }
 
-  .pixelDialog {
+.pixelDialog {
     display: none; 
     background-color: darkorange;
     text-align:center;
