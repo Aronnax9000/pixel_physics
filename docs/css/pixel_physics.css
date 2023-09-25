@@ -36,7 +36,8 @@ a.ui-state-focus {
 }
 
 button {
-  width: 200px; 
+  width: 200px;
+  height: 150px; 
 }
 
 
