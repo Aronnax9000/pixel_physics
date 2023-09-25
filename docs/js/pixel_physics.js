@@ -29,13 +29,15 @@ $(document).ready(function(){
     $("#textDialog").dialog({autoOpen: false,
         title: "Edit Model",
         minWidth: 500,
-        position: { my: "center", at: "center" }
+        position: { my: "center", at: "center" },
+        classes: {"pixelDialog"}
     });
 
     $("#aboutDialog").dialog({autoOpen: false,
         title: "About Pixel Physics",
         minWidth: 500,
-        position: { my: "center", at: "center" }
+        position: { my: "center", at: "center" },
+        classes: {"pixelDialog"}
     });
     
     $('#updateModel').click(function(){
