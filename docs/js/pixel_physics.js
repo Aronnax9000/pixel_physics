@@ -31,8 +31,13 @@ $(document).ready(function(){
     $('#theButton').click(function(){
         renderPixelField();
     });
+    $("#menuabout").click(function() {menuAboutClick()});
+    $("#menutext").click(function() {menuTextClick()});
     renderPixelField();
 });
+
+function menuAboutClick() { alert('about');}
+function menuAboutClick() { alert('text');}
 
 function parsetext(textareaid) {
     var text = $(textareaid).val().split('\n');
