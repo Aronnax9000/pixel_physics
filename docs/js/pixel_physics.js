@@ -31,7 +31,8 @@ $(document).ready(function(){
         minWidth: 500,
         position: { my: "center", at: "center" },
         classes: {
-            "ui-dialog": "pixelDialog"
+            "ui-dialog": "pixelDialog",
+            "ui-dialog-title": "pixelDialogTitle"
         }
     });
 
