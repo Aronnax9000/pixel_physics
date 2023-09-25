@@ -7,6 +7,10 @@ body {
 a.ui-state-focus {
   background-color: orange;
 }  
+
+#menu {
+  display:none;
+}
 .menucontainer {
     margin-left: auto; 
     margin-right: 0;
