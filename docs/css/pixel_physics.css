@@ -3,11 +3,11 @@ body {
   font-family: sans-serif;
   font-size: xx-large;
 }
-
+/*
 a.ui-state-focus {
 
 }  
-
+*/
 ui-menu, .ui-menu-item { 
   width: 160px; 
   background-color: rgba(255,255,255,0.0);
