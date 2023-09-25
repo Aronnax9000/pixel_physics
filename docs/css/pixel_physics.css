@@ -16,19 +16,14 @@ a.ui-state-focus {
     margin-right: 0;
 }
 .ui-menu, .ui-menu-item { 
-  width: 82px;
   background-color: darkorange;
 }
 
 .hamburger  { 
-  width: 82px; 
   background-color: darkorange;
   border: none;
 }
 
-.regularmenu {
-  width: 150px;
-}
 
 .header {
   display: grid;
