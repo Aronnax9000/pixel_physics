@@ -37,15 +37,20 @@ $(document).ready(function(){
         minWidth: 500,
         position: { my: "center", at: "center" }
     });
-
-    $("#textarea1").html(pixelFieldLines.join("\n"));
+    
     $('#updateModel').click(function(){
         renderPixelField();
     });
     $("#menuabout").click(function() {menuAboutClick()});
     $("#menutext").click(function() {menuTextClick()});
+    initModel();
     renderPixelField();
 });
+
+function initModel() {
+    var text = pixelFieldLines.join("\n")
+    $("#textarea1").html(text);
+}
 
 function menuAboutClick() { 
     $("#aboutDialog").dialog("open");}
