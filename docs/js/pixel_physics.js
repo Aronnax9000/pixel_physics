@@ -157,7 +157,7 @@ function matrix6633ToText(matrix6633) {
     return text;
 }
 
-function build3x3(divcell, i, j) {
+function build3x3(divcell, row, column) {
     divcell.empty();
     for(k = 0; k < 3; k++) {
         for(l = 0; l < 3; l++) {
@@ -204,7 +204,7 @@ function renderPixelField() {
             var divcell = $("<div>").addClass('pixelField3x3');  
             $(pixelField6x6Cell).append(divcell);         
         
-            build3x3(divcell, i, j);
+            build3x3(divcell, row, column);
             
         }
     }
@@ -277,7 +277,7 @@ function renderPixelField() {
                 var column = pixelField6x6Cell.data("column");
                 $("#column").html(column + 1);
                 
-                build3x3($("#3x3editor"), row, column)
+                build3x3($("#3x3editor"), pixelField6x6Cell.data("pixelField3x3"))
                 $("#edit3x3Dialog").dialog("open");
             }
         } else {
