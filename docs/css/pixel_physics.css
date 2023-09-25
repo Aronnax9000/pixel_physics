@@ -10,6 +10,7 @@ a.ui-state-focus {
 .menucontainer {
     border: solid;
     text-align: right;
+    display: inline-block;
 }
 .ui-menu, .ui-menu-item { 
   width: 82px;
