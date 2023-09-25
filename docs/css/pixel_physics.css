@@ -11,12 +11,12 @@ a.ui-state-focus {
 
 .ui-menu, .ui-menu-item { 
   width: 82px;
-  background-color: darkorange);
+  background-color: darkorange;
 }
 
 .hamburger  { 
   width: 82px; 
-  background-color: darkorange);
+  background-color: darkorange;
   border: none;
 }
 
