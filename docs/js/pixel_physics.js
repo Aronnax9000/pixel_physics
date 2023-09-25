@@ -25,7 +25,9 @@ var matrix6633;
 
 $(document).ready(function(){
     $("#menu").menu({position: { at: "right top" , my: "left top"}});
-    $("#textDialog").dialog({autoOpen: false });
+    $("#textDialog").dialog({autoOpen: false,
+        position: { my: "left top", at: "left top" }
+    });
 
     $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#theButton').click(function(){
