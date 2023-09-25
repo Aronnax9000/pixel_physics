@@ -106,7 +106,6 @@ function matrix6633ToText(matrix6633) {
             if(col6 != 5 && col3 == 2) text = text.concat(" ");
             
         }
-        if(line % 3 == 2) text = text.concat("\n");
         text = text.concat("\n");
     }
     return text;
