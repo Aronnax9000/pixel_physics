@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 function menuAboutClick() { alert('about');}
 function menuTextClick() { 
-    $("#textDialog").open();
+    $("#textDialog").dialog("open");
 }
 
 function parsetext(textareaid) {
