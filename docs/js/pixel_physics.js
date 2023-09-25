@@ -48,18 +48,18 @@ $(document).ready(function(){
     }).draggable();
     
     $('#updateModel').click(function(){
+        initModel();
         renderPixelField();
     });
     $("#menuabout").click(function() {menuAboutClick()});
     $("#menutext").click(function() {menuTextClick()});
+    $("#textarea1").html(pixelFieldLines.join("\n"));
     initModel();
     renderPixelField();
 });
 
 function initModel() {
-    var text = pixelFieldLines.join("\n")
-    $("#textarea1").html(text);
-    var linesA = parsetext(text);
+    var linesA = parsetext($("#textarea1").html());
     
     var linesA2 = [];
     for (i=0;i<18;i++){
