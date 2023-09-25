@@ -7,8 +7,9 @@ body {
 a.ui-state-focus {
   background-color: orange;
 }  
-
-
+.menucontainer {
+    justify-items: end;
+}
 .ui-menu, .ui-menu-item { 
   width: 82px;
   background-color: darkorange;
@@ -23,9 +24,7 @@ a.ui-state-focus {
 .regularmenu {
   width: 150px;
 }
-#menu {
-  text-align: right;
-}
+
 .header {
   display: grid;
   width: 100%;
