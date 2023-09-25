@@ -23,7 +23,9 @@ a.ui-state-focus {
 .regularmenu {
   width: 150px;
 }
-
+#menu {
+  text-align: right;
+}
 .header {
   display: grid;
   width: 100%;
