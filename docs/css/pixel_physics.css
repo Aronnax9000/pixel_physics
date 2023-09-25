@@ -25,7 +25,7 @@ a.ui-state-focus {
 }
 
 .header {
-  display: block;
+  display: inline;
   width: 100%
 }
 
