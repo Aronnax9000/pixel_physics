@@ -4,7 +4,8 @@ body {
   font-size: xx-large;
 }
 
-.menu {
+.ui-menu { 
+  width: 50px; 
   background-color: rgba(255,255,255,0.0);
   border: none;
 }
