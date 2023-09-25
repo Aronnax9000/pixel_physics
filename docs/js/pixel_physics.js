@@ -34,7 +34,7 @@ $(document).ready(function(){
             "ui-dialog": "pixelDialog",
             "ui-dialog-titlebar": "pixelDialogTitleBar"
         }
-    });
+    }).draggable();
 
     $("#aboutDialog").dialog({autoOpen: false,
         title: "About Pixel Physics",
@@ -45,7 +45,7 @@ $(document).ready(function(){
             "ui-dialog-titlebar": "pixelDialogTitleBar"
 
         }
-    });
+    }).draggable();
     
     $('#updateModel').click(function(){
         renderPixelField();
