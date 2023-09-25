@@ -164,14 +164,15 @@ function renderPixelField() {
             
             $(".pixelField6x6").append(pixelField6x6Cell);
 
-            var divcell = $("<div>").addClass('pixelField3x3');  
-            $(pixelField6x6Cell).append(divcell);         
             var selection_overlay = $("<div>").addClass('selection_overlay');                     
             $(pixelField6x6Cell).append(selection_overlay);         
             var hover_overlay = $("<div>").addClass('hover_overlay');           
             $(pixelField6x6Cell).append(hover_overlay);         
             var equals_overlay = $("<div>").addClass('equals_overlay');           
             $(pixelField6x6Cell).append(equals_overlay);         
+
+            var divcell = $("<div>").addClass('pixelField3x3');  
+            $(pixelField6x6Cell).append(divcell);         
         
             for(k = 0; k < 3; k++) {
               for(l = 0; l < 3; l++) {
