@@ -37,7 +37,6 @@ a.ui-state-focus {
 
 button {
   width: 200px; 
-  height: 100px; 
   font-size:large;
 }
 
@@ -122,4 +121,8 @@ button {
 
   #textarea1 {
     font-family: monospace;
+  }
+
+  #textDialog {
+    text-align:center;
   }
