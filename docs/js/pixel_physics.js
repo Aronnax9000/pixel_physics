@@ -30,14 +30,18 @@ $(document).ready(function(){
         title: "Edit Model",
         minWidth: 500,
         position: { my: "center", at: "center" },
-        classes: "pixelDialog"
+        classes: {
+            "ui-dialog": "pixelDialog"
+        }
     });
 
     $("#aboutDialog").dialog({autoOpen: false,
         title: "About Pixel Physics",
         minWidth: 500,
         position: { my: "center", at: "center" },
-        classes: "pixelDialog"
+        classes: {
+            "ui-dialog": "pixelDialog"
+        }
     });
     
     $('#updateModel').click(function(){
