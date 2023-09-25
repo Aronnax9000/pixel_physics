@@ -53,13 +53,13 @@ $(document).ready(function(){
     });
     $("#menuabout").click(function() {menuAboutClick()});
     $("#menutext").click(function() {menuTextClick()});
-    $("#textarea1").html(pixelFieldLines.join("\n"));
+    $("#textarea1").val(pixelFieldLines.join("\n"));
     initModel();
     renderPixelField();
 });
 
 function initModel() {
-    var linesA = parsetext($("#textarea1").html());
+    var linesA = parsetext("#textarea1");
     
     var linesA2 = [];
     for (i=0;i<18;i++){
