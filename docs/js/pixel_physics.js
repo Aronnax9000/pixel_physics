@@ -26,6 +26,7 @@ var matrix6633;
 $(document).ready(function(){
     $("#menu").menu({position: { at: "right top" , my: "left top"}});
     $("#textDialog").dialog({autoOpen: false,
+        title: "Edit Model"
         minWidth: 500,
         position: { my: "center", at: "center" }
     });
