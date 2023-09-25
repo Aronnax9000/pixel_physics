@@ -277,7 +277,7 @@ function renderPixelField() {
                 var column = pixelField6x6Cell.data("column");
                 $("#column").html(column + 1);
                 
-                build3x3($("#3x3editor"), pixelField6x6Cell.data("pixelField3x3"))
+                build3x3($("#3x3editor"), row, column);
                 $("#edit3x3Dialog").dialog("open");
             }
         } else {
