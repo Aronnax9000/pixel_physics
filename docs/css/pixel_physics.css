@@ -7,9 +7,7 @@ body {
 a.ui-state-focus {
   background-color: rgba(255,255,255,0.5);
 }  
-.regularmenu {
-  width: 150px;
-}
+
 
 .ui-menu, .ui-menu-item { 
   width: 82px;
@@ -20,6 +18,10 @@ a.ui-state-focus {
   width: 82px; 
   background-color: rgba(255,255,255,0.0);
   border: none;
+}
+
+.regularmenu {
+  width: 150px;
 }
 
 .header {
