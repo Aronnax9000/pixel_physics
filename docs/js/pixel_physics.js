@@ -32,7 +32,7 @@ $(document).ready(function(){
         position: { my: "center", at: "center" },
         classes: {
             "ui-dialog": "pixelDialog",
-            "ui-dialog-title": "pixelDialogTitle"
+            "ui-dialog-titlebar": "pixelDialogTitleBar"
         }
     });
 
@@ -41,7 +41,9 @@ $(document).ready(function(){
         minWidth: 500,
         position: { my: "center", at: "center" },
         classes: {
-            "ui-dialog": "pixelDialog"
+            "ui-dialog": "pixelDialog",
+            "ui-dialog-titlebar": "pixelDialogTitleBar"
+
         }
     });
     
