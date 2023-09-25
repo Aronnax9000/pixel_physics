@@ -37,7 +37,7 @@ $(document).ready(function(){
 });
 
 function menuAboutClick() { alert('about');}
-function menuAboutClick() { alert('text');}
+function menuTextClick() { alert('text');}
 
 function parsetext(textareaid) {
     var text = $(textareaid).val().split('\n');
