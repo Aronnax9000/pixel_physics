@@ -158,6 +158,7 @@ function matrix6633ToText(matrix6633) {
 }
 
 function build3x3(divcell, i, j) {
+    divcell.empty();
     for(k = 0; k < 3; k++) {
         for(l = 0; l < 3; l++) {
             var value = matrix6633[row][column][k][l];
