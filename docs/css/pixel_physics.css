@@ -5,12 +5,12 @@ body {
 }
 
 .ui-menu  { 
-  width: 50px; 
+  width: 60px; 
   background-color: rgba(255,255,255,0.0);
   border: none;
 }
 .ui-menu-item, a.ui-state-focus  { 
-  width: 50px; 
+  width: 60px; 
   background-color: rgba(255,255,255,0.0);
   border: none;
 }
