@@ -265,7 +265,7 @@ function renderPixelField() {
         if(pixelField6x6Cell === undefined) {
             return;
         }
-        var pixelField6x6 = pixelField6x6TurnOffHoverAndEquals(pixelField6x6Cell);
+        pixelField6x6TurnOffHoverAndEquals(pixelField6x6Cell);
 
         var target = pixelField6x6Cell.find('.selection_overlay');
             if($(target).css('display') == 'block') {
@@ -276,6 +276,7 @@ function renderPixelField() {
             } else {
                 console.log("click target" + target + " " + row + " " + column);
                 $("#q").html(charge(pixelField3x3));
+                build3x3($("#3x3editor"), i, j)
                 $("#edit3x3Dialog").dialog("open");
             }
         } else {
