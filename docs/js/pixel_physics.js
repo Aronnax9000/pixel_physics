@@ -32,6 +32,12 @@ $(document).ready(function(){
         position: { my: "center", at: "center" }
     });
 
+    $("#aboutDialog").dialog({autoOpen: false,
+        title: "About Pixel Physics",
+        minWidth: 500,
+        position: { my: "center", at: "center" }
+    });
+
     $("#textarea1").html(pixelFieldLines.join("\n"));
     $('#updateModel').click(function(){
         renderPixelField();
@@ -41,7 +47,8 @@ $(document).ready(function(){
     renderPixelField();
 });
 
-function menuAboutClick() { alert('about');}
+function menuAboutClick() { 
+    $("#aboutDialog").dialog("open");}
 function menuTextClick() { 
     $("#textarea1").val(matrix6633ToText(matrix6633));
     $("#textDialog").dialog("open");

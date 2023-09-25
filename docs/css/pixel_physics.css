@@ -127,7 +127,7 @@ button {
     font-family: monospace;
   }
 
-  #textDialog {
+  .pixelDialog {
     display: none;
     background-color: darkorange;
     text-align:center;
