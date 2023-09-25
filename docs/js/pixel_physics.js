@@ -24,7 +24,8 @@ var pixelFieldLines = [
 var matrix6633;
 
 $(document).ready(function(){
-    $("#menu").menu({position: { at: "right top" , my: "left top"}});
+    $("#menu").menu({position: { at: "right top" , my: "left top"}})
+    .css("display", "block");
     $("#textDialog").dialog({autoOpen: false,
         title: "Edit Model",
         minWidth: 500,
