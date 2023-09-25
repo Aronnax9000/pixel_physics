@@ -157,6 +157,24 @@ function matrix6633ToText(matrix6633) {
     return text;
 }
 
+function build3x3(divcell, i, j) {
+    for(k = 0; k < 3; k++) {
+        for(l = 0; l < 3; l++) {
+            var value = matrix6633[row][column][k][l];
+            var imageName;
+            switch(value) {
+                case "-":  imageName = "img/minus.png"; break;
+                case "0":  imageName = "img/zero.png"; break;
+                case "+":  imageName = "img/plus.png"; break;
+            }
+            divcell.append($("<img>")
+            .attr("src", imageName)
+            .addClass('pixelField'));
+        }
+    }
+}
+
+
 function renderPixelField() {
     $(".pixelField6x6").empty();
 
@@ -185,20 +203,7 @@ function renderPixelField() {
             var divcell = $("<div>").addClass('pixelField3x3');  
             $(pixelField6x6Cell).append(divcell);         
         
-            for(k = 0; k < 3; k++) {
-              for(l = 0; l < 3; l++) {
-                var value = matrix6633[row][column][k][l];
-                var imageName;
-                switch(value) {
-                    case "-":  imageName = "img/minus.png"; break;
-                    case "0":  imageName = "img/zero.png"; break;
-                    case "+":  imageName = "img/plus.png"; break;
-                }
-                divcell.append($("<img>")
-                  .attr("src", imageName)
-                  .addClass('pixelField'));
-              }
-            }
+            build3x3(divcell, i, j);
             
         }
     }
