@@ -34,11 +34,6 @@ a.ui-state-focus {
   grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
 }
 
-button {
-  width: 200px;
-  height: 150px; 
-}
-
 
 .pixelField6x6 {
     width: 769px;
