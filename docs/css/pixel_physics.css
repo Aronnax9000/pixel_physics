@@ -122,8 +122,12 @@ button {
     font-family: monospace;
   }
 
-.pixelDialog, .pixelDialogTitle {
+.pixelDialog {
     display: none; 
     background: darkorange;
     text-align:center;
+  }
+
+  .pixelDialogTitle {
+    background: darkorange;
   }
