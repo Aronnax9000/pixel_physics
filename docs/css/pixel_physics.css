@@ -25,8 +25,11 @@ a.ui-state-focus {
 }
 
 .header {
-  display: inline;
-  width: 100%
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
 }
 
 button {
