@@ -119,3 +119,7 @@ button {
     z-index: 2;
     cursor: pointer;
   }
+
+  #textarea1 {
+    font-family: monospace;
+  }
