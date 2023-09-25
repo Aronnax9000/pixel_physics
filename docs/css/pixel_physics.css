@@ -124,6 +124,6 @@ button {
 
 .pixelDialog {
     display: none; 
-    background-color: darkorange;
+    background: darkorange;
     text-align:center;
   }
