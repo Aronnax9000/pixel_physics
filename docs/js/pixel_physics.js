@@ -273,7 +273,7 @@ function renderPixelField() {
                 console.log("click target" + target + " " + row + " " + column);
                 $("#q").html(charge(pixelField3x3));
                 var row = pixelField6x6Cell.data("row");
-                $("#row").html("abcdef".substring(row, row+1);
+                $("#row").html("abcdef".substring(row, row+1));
                 var column = pixelField6x6Cell.data("column");
                 $("#column").html(column + 1);
                 
