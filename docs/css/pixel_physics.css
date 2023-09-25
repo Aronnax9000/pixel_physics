@@ -105,6 +105,8 @@ button {
     cursor: pointer;
   }
 
+.textDialog {width:auto;}
+
   .equals_overlay {
     position: absolute;
     display: none;
