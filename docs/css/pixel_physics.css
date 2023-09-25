@@ -8,7 +8,7 @@ a.ui-state-focus {
   background-color: orange;
 }  
 .menucontainer {
-    justify-items: end;
+    text-align: end;
 }
 .ui-menu, .ui-menu-item { 
   width: 82px;
