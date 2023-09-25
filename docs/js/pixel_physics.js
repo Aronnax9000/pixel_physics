@@ -27,7 +27,7 @@ $(document).ready(function(){
     $("#menu").menu({position: { at: "right top" , my: "left top"}});
     $("#textDialog").dialog({autoOpen: false,
         minWidth: 500,
-        position: { my: "left top", at: "left top" }
+        position: { my: "center", at: "center" }
     });
 
     $("#textarea1").html(pixelFieldLines.join("\n"));
