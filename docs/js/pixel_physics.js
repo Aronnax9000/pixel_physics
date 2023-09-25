@@ -46,6 +46,17 @@ $(document).ready(function(){
 
         }
     }).draggable();
+
+    $("#edit3x3Dialog").dialog({autoOpen: false,
+        title: "Edit Pixel Matrix",
+        minWidth: 500,
+        position: { my: "center", at: "center" },
+        classes: {
+            "ui-dialog": "pixelDialog",
+            "ui-dialog-titlebar": "pixelDialogTitleBar"
+
+        }
+    }).draggable();
     
     $('#updateModel').click(function(){
         initModel();
@@ -259,8 +270,8 @@ function renderPixelField() {
                 return;  
             } else {
                 console.log("click target" + target + " " + row + " " + column);
-                var q = charge(pixelField3x3);
-                alert("Charge is " + q);
+                $("#q").html(charge(pixelField3x3));
+                $("#edit3x3Dialog").dialog("open");
             }
         } else {
             pixelField6x6Cell.parent().find('.selection_overlay').css('display', 'none');
