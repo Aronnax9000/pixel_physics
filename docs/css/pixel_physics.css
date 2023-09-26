@@ -119,6 +119,6 @@ a.ui-state-focus {
   font-family: monospace;
 }
 
-#3x3editorIOSpan {
-  display: inline-block;
+.Editor3x3IOSpan {
+  display: inline;
 }
