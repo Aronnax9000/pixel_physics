@@ -51,28 +51,29 @@ a.ui-state-focus {
     grid-auto-rows: repeat(6, 120px);
   }
 
-  .pixelField6x6Cell {
+.pixelField6x6Cell {
     border: none;
     position: relative;
-  }
+}
 
 
 .pixelField3x3 {
-    width: 122;
-    position: inline;
-    border: solid;
-    border-width: 1px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0px;
-    grid-auto-columns: repeat(3, 40px);
-    grid-auto-rows: repeat(3, 40px);
-  }
+  width: 122;
+  height: 122;
+  position: inline;
+  border: solid;
+  border-width: 1px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px;
+  grid-auto-columns: repeat(3, 40px);
+  grid-auto-rows: repeat(3, 40px);
+}
   
 .pixelField {
     border: none;
-  }
+}
 
 
 .hover_overlay, .selection_overlay, .equals_overlay {
