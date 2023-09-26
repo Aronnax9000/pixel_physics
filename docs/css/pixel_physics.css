@@ -9,12 +9,14 @@ a.ui-state-focus {
 }  
 
 #menu {
-  display:none;
+  display: none;
 }
+
 .menucontainer {
     margin-left: auto; 
     margin-right: 0;
 }
+
 .ui-menu, .ui-menu-item { 
   background-color: darkorange;
 }
@@ -113,11 +115,7 @@ a.ui-state-focus {
     background-color: rgba(255,255,255,0.5);
     z-index: 2;
     cursor: pointer;
-  }
-
-#textarea1 {
-    font-family: monospace;
-  }
+}
 
 .pixelDialog {
     display: none; 
@@ -125,6 +123,11 @@ a.ui-state-focus {
     text-align:center;
   }
 
-  .pixelDialogTitleBar {
+.pixelDialogTitleBar {
     background: darkorange;
-  }
+}
+
+
+#textarea1 {
+  font-family: monospace;
+}
