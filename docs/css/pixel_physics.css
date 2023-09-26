@@ -67,6 +67,8 @@ a.ui-state-focus {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 0px;
+  padding: 0px;
+  margin: 0px;
   grid-auto-columns: repeat(3, 40px);
   grid-auto-rows: repeat(3, 40px);
 }
