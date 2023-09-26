@@ -157,8 +157,8 @@ function matrix6633ToText(matrix6633) {
     return text;
 }
 
-function build3x3(divcell, row, column) {
-    divcell.empty();
+function build3x3(element, row, column) {
+    element.empty();
     for(k = 0; k < 3; k++) {
         for(l = 0; l < 3; l++) {
             var value = matrix6633[row][column][k][l];
@@ -168,7 +168,7 @@ function build3x3(divcell, row, column) {
                 case "0":  imageName = "img/zero.png"; break;
                 case "+":  imageName = "img/plus.png"; break;
             }
-            divcell.append($("<img>")
+            element.append($("<img>")
             .attr("src", imageName)
             .addClass('pixelField'));
         }
@@ -277,7 +277,7 @@ function renderPixelField() {
                 var column = pixelField6x6Cell.data("column");
                 $("#column").html(column + 1);
                 
-                build3x3($("#3x3editor"), row, column);
+                build3x3($("#3x3editorInput"), row, column);
                 $("#edit3x3Dialog").dialog("open");
             }
         } else {
