@@ -117,3 +117,7 @@ a.ui-state-focus {
 #textarea1 {
   font-family: monospace;
 }
+
+#3x3editorIOSpan {
+  display: inline;
+}
