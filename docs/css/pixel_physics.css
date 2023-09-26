@@ -58,6 +58,7 @@ a.ui-state-focus {
 
 
 .pixelField3x3 {
+  display: inline; 
   width: 122;
   height: 122;
   position: inline;
