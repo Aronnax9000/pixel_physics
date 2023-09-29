@@ -155,3 +155,20 @@ a.ui-state-focus {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
+
+#searchcell {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.zero {
+  background-image: url("../img/zero.png"); 
+}
+
+.plus {
+  background-image: url("../img/plus.png"); 
+}
+
+.minus {
+  background-image: url("../img/minus.png"); 
+}
