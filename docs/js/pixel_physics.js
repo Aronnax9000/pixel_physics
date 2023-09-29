@@ -273,9 +273,8 @@ function renderPixelField() {
                 console.log("click target" + target + " " + row + " " + column);
                 $("#q").html(charge(pixelField3x3));
                 var row = pixelField6x6Cell.data("row");
-                $("#row").html("abcdef".charAt(row));
                 var column = pixelField6x6Cell.data("column");
-                $("#column").html(column + 1);
+                $("#gridref").html("abcdef".charAt(row).concat(column + 1));
                 
                 build3x3($("#editorInput3x3"), row, column);
                 build3x3($("#editorOutput3x3"), row, column);
