@@ -107,6 +107,7 @@ a.ui-state-focus {
     display: none; 
     background: darkorange;
     text-align:center;
+    width: auto;
   }
 
 .pixelDialogTitleBar {
@@ -125,8 +126,8 @@ a.ui-state-focus {
   border: solid;
   border-width: 1px;
   display: grid;
-  grid-template-columns: 122px 244px 122px;
-  grid-template-rows: 122px;
+  grid-template-columns: 124px 248px 124px;
+  grid-template-rows: 124px;
   gap: 0px;
 }
 
