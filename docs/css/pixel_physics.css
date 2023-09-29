@@ -141,5 +141,17 @@ a.ui-state-focus {
 }
 
 .razoredit {
+  padding: 0px;
+  border: solid;
+  border-width: 1px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px;
   background-image: url("../img/razor.png");
+}
+
+#gridref {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
