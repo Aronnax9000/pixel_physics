@@ -28,7 +28,7 @@ $(document).ready(function(){
     .css("display", "block");
     $("#textDialog").dialog({autoOpen: false,
         title: "Edit Model",
-        minWidth: 520,
+        minWidth: 540,
         position: { my: "center", at: "center" },
         classes: {
             "ui-dialog": "pixelDialog",
