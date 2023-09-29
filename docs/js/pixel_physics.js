@@ -284,8 +284,8 @@ function renderPixelField() {
                 var row = pixelField6x6Cell.data("row");
                 var column = pixelField6x6Cell.data("column");
 
-                $("editorInput3x3").data('pixelmatrix', matrix6633[row][column]);
-                $("editorOutput3x3").data('pixelmatrix', matrix6633[row][column]);
+                $("#editorInput3x3").data('pixelmatrix', matrix6633[row][column]);
+                $("#editorOutput3x3").data('pixelmatrix', matrix6633[row][column]);
                 $("#gridref").html("abcdef".charAt(row).concat(column + 1));
                 
                 build3x3($("#editorInput3x3"));
