@@ -59,8 +59,8 @@ $(document).ready(function(){
     }).draggable();
     
 
-    $("#searchcell").click(function() {
-        searchcellClick(this);
+    $("#singlepixel").click(function() {
+        singlepixelClick(this);
     });
 
     $('#updateModel').click(function(){
@@ -328,7 +328,7 @@ function renderPixelField() {
         return true;
     }  
 
-    function searchcellClick(theElement) {
+    function singlepixelClick(theElement) {
         if($(theElement).hasClass('zero')) {
             $(theElement).removeClass('zero').addClass('plus');   
         } else if($(theElement).hasClass('plus')) {

@@ -163,6 +163,11 @@ a.ui-state-focus {
   grid-row: 3 / 4;
 }
 
+.singlepixel {
+  width: 40px;
+  height: 40px;
+}
+
 .zero {
   background-image: url("../img/zero.png"); 
 }
