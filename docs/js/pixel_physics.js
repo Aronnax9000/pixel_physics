@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     $("#searchcell").click(function() {
         searchcellClick(this);
-    })
+    });
 
     $('#updateModel').click(function(){
         initModel();
@@ -213,6 +213,7 @@ function renderPixelField() {
             
         }
     }
+}
     /**
      * Turn off the hover and equals overlays for every cell in the 6x6 grid.
      * 
