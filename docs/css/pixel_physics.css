@@ -143,3 +143,7 @@ a.ui-state-focus {
   grid-column: 3/4;
   grid-row: 1/2;
 }
+
+.razoredit {
+  background-image: url("razor.png");
+}
