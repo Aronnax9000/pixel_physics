@@ -59,7 +59,7 @@ $(document).ready(function(){
     }).draggable();
     
 
-    $("#singlepixel").click(function() {
+    $(".singlepixel").click(function() {
         singlepixelClick(this);
     });
 
