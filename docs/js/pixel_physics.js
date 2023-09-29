@@ -28,7 +28,7 @@ $(document).ready(function(){
     .css("display", "block");
     $("#textDialog").dialog({autoOpen: false,
         title: "Edit Model",
-        minWidth: 540,
+        minWidth: 500,
         position: { my: "center", at: "center" },
         classes: {
             "ui-dialog": "pixelDialog",
@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     $("#edit3x3Dialog").dialog({autoOpen: false,
         title: "Edit Pixel Matrix",
-        minWidth: 500,
+        minWidth: 540,
         position: { my: "center", at: "center" },
         classes: {
             "ui-dialog": "pixelDialog",
