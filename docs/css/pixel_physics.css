@@ -118,20 +118,16 @@ a.ui-state-focus {
   font-family: monospace;
 }
 
-.editor3x3IOSpan {
-  display: inline;
-}
+
 
 .editor3x3grid {
   padding: 5px;
   border: solid;
   border-width: 1px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 5px;
-  grid-auto-columns: 120px 240px 120px;
-  grid-auto-rows: repeat(1, 120px);
+  grid-template-columns: 120px 240px 120px;
+  grid-template-rows: 120px;
+  gap: 0px;
 }
 
 #editorInput3x3 {
