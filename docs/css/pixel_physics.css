@@ -107,7 +107,7 @@ a.ui-state-focus {
     display: none; 
     background: darkorange;
     text-align:center;
-    width: auto;
+    width: 500px;
   }
 
 .pixelDialogTitleBar {
