@@ -58,6 +58,11 @@ $(document).ready(function(){
         }
     }).draggable();
     
+
+    $("#searchcell").click(function() {
+        searchcellClick(this);
+    })
+
     $('#updateModel').click(function(){
         initModel();
         renderPixelField();
@@ -322,4 +327,12 @@ function renderPixelField() {
         return true;
     }  
 
-}
+    function searchcellClick(theElement) {
+        if($(theElement).hasClass('zero')) {
+            $(theElement).removeClass('zero').addClass('plus');   
+        } else if($(theElement).hasClass('plus')) {
+            $(theElement).removeClass('plus').addClass('minus');   
+        } else if($(theElement).hasClass('minus')) {
+            $(theElement).removeClass('minus').addClass('zero');   
+        }
+    }
