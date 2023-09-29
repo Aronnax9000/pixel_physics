@@ -121,7 +121,7 @@ a.ui-state-focus {
 
 
 .editor3x3grid {
-  padding: 5px;
+  padding: 0px;
   border: solid;
   border-width: 1px;
   display: grid;
