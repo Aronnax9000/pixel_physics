@@ -162,11 +162,14 @@ function matrix6633ToText(matrix6633) {
     return text;
 }
 
-function build3x3(element, row, column) {
+
+
+function build3x3(element) {
     element.empty();
+    pixelmatrix = $(element).data("pixelmatrix");
     for(k = 0; k < 3; k++) {
         for(l = 0; l < 3; l++) {
-            var value = matrix6633[row][column][k][l];
+            var value = pixelmatrix[k][l];
             var imageName;
             switch(value) {
                 case "-":  imageName = "img/minus.png"; break;
@@ -208,8 +211,8 @@ function renderPixelField() {
 
             var divcell = $("<div>").addClass('pixelField3x3');  
             $(pixelField6x6Cell).append(divcell);         
-        
-            build3x3(divcell, row, column);
+            divcell.data('pixelmatrix', matrix6633[row][column]);
+            build3x3(divcell);
             
         }
     }
@@ -280,10 +283,13 @@ function renderPixelField() {
                 $("#q").html(charge(pixelField3x3));
                 var row = pixelField6x6Cell.data("row");
                 var column = pixelField6x6Cell.data("column");
+
+                $("editorInput3x3").data('pixelmatrix', matrix6633[row][column]);
+                $("editorOutput3x3").data('pixelmatrix', matrix6633[row][column]);
                 $("#gridref").html("abcdef".charAt(row).concat(column + 1));
                 
-                build3x3($("#editorInput3x3"), row, column);
-                build3x3($("#editorOutput3x3"), row, column);
+                build3x3($("#editorInput3x3"));
+                build3x3($("#editorOutput3x3"));
                 $("#edit3x3Dialog").dialog("open");
             }
         } else {
