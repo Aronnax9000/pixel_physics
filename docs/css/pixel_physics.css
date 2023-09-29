@@ -121,3 +121,15 @@ a.ui-state-focus {
 .editor3x3IOSpan {
   display: inline;
 }
+
+.editor3x3grid {
+  padding: 5px;
+  border: solid;
+  border-width: 1px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  grid-auto-columns: repeat(2, 120px);
+  grid-auto-rows: repeat(2, 120px);
+}
