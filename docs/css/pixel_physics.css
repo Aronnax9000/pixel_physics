@@ -166,6 +166,10 @@ a.ui-state-focus {
 #replacecells {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 40px 40px 40px;
+  grid-template-rows: 40px;
+
 }
 
 .singlepixel {
