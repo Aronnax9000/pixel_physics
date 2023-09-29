@@ -125,8 +125,8 @@ a.ui-state-focus {
   border: solid;
   border-width: 1px;
   display: grid;
-  grid-template-columns: 120px 240px 120px;
-  grid-template-rows: 120px;
+  grid-template-columns: 122px 244px 122px;
+  grid-template-rows: 122px;
   gap: 0px;
 }
 
