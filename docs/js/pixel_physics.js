@@ -349,7 +349,7 @@ function renderPixelField() {
 
     function pixelEditReset(resetElement) {
         $(resetElement)
-        .closest(".razoredit")
+        .closest(".pixelDialog")
         .find(".singlepixel")
         .removeClass('plus')
         .removeClass('minus')
