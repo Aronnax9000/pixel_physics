@@ -1,4 +1,23 @@
 
+var VonNeumannNeighborhood3x3 = [
+// Row 0
+[
+   [[0,1],[1,0]], // 0,0
+   [[0,0],[0,2], [1,1]], // 0,1
+   [[0,1],[1,2]] // 0,2
+],[
+// Row 1
+   [[0,0],[1,1],[2,0]], 
+[[0,1],[1,0],[1,2],[2,1]],
+[[0,2],[1,1],[2,2]]
+],[
+    // Row 2
+[[1,0],[2,1]],
+[[1,1],[2,0],[2,2]],
+[[1,2],[2,1]]
+]];
+
+
 
 var pixelFieldLines = [
 "0+- +0- +-0 -+0 -0+ 0-+",
@@ -358,4 +377,33 @@ function renderPixelField() {
     function pixelEditSave(saveElement) {
         
     }
-    $(".save").click(function() { pixelEditSave();});
+    
+function razor(destArray, srcArry, razorparms) {
+    for(row = 0; row < 3; row++) {
+        for(column = 0; column < 3; column++) {
+            if(srcArry[row][column] == razorparms.search) {
+                destArray[row][column] = razorparms.replace[row];
+                break;
+            } else {
+                destArray[row][column] = srcArray[row][column];
+            }
+        }
+    }
+}
+
+
+
+function isValid(srcArray) {
+    for(row = 0; row < 3; row++) {
+        for(column = 0; column < 3; column++) {
+            neighborhood = VonNeumannNeighborhood3x3[row][column];
+            for(neighbor = 0; neighbor < neighborhood.length; neighbor++) {
+                neighborcoords = neighborhood[neighbor];
+                if(srcArray[row][column] = srcArray[neighborcoords[0]][neighborcoords[1]]) {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
