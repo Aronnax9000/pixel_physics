@@ -63,6 +63,9 @@ $(document).ready(function(){
         singlepixelClick(this);
     });
 
+    $(".reset").click(function() { pixelEditReset(this);});
+    $(".save").click(function() { pixelEditSave(this);});
+    
     $('#updateModel').click(function(){
         initModel();
         renderPixelField();
@@ -343,3 +346,16 @@ function renderPixelField() {
             $(theElement).removeClass('minus').addClass('zero');   
         }
     }
+
+    function pixelEditReset(resetElement) {
+        $(resetElement)
+        .closest(".razoredit")
+        .find(".singlepixel")
+        .removeClass('plus')
+        .removeClass('minus')
+        .addClass('zero');
+    }
+    function pixelEditSave(saveElement) {
+        
+    }
+    $(".save").click(function() { pixelEditSave();});

@@ -146,7 +146,7 @@ a.ui-state-focus {
   border-width: 1px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 0px;
   background-image: url("../img/razor.png");
 }
@@ -187,4 +187,14 @@ a.ui-state-focus {
 
 .minus {
   background-image: url("../img/minus.png"); 
+}
+
+.reset {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.save {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
 }
