@@ -1,97 +1,9 @@
 
-var VonNeumannNeighborhood3x3 = [
-// Row 0
-[
-   [[0,1],[1,0]], // 0,0
-   [[0,0],[0,2], [1,1]], // 0,1
-   [[0,1],[1,2]] // 0,2
-],[
-// Row 1
-   [[0,0],[1,1],[2,0]], 
-[[0,1],[1,0],[1,2],[2,1]],
-[[0,2],[1,1],[2,2]]
-],[
-    // Row 2
-[[1,0],[2,1]],
-[[1,1],[2,0],[2,2]],
-[[1,2],[2,1]]
-]];
-
-
-
-var pixelFieldLines = [
-"0+- +0- +-0 -+0 -0+ 0-+",
-"+-0 -+0 -0+ 0-+ 0+- +0-",
-"-0+ 0-+ 0+- +0- +-0 -+0",
-"0+- +0- +-0 -+0 -0+ 0-+",
-"-0+ 0-+ 0+- +0- +-0 -+0",
-"+-0 -+0 -0+ 0-+ 0+- +0-",
-"-0+ 0-+ 0+- +0- +-0 -+0",
-"0+- +0- +-0 -+0 -0+ 0-+",
-"+-0 -+0 -0+ 0-+ 0+- +0-",
-"-0+ 0-+ 0+- +0- +-0 -+0",
-"+-0 -+0 -0+ 0-+ 0+- +0-",
-"0+- +0- +-0 -+0 -0+ 0-+",
-"+-0 -+0 -0+ 0-+ 0+- +0-",
-"-0+ 0-+ 0+- +0- +-0 -+0",
-"0+- +0- +-0 -+0 -0+ 0-+",
-"+-0 -+0 -0+ 0-+ 0+- +0-",
-"0+- +0- +-0 -+0 -0+ 0-+",
-"-0+ 0-+ 0+- +0- +-0 -+0"
-];
-
 var matrix6633;
 
 $(document).ready(function(){
-    $("#menu").menu({position: { at: "right top" , my: "left top"}})
-    .css("display", "block");
-    $("#textDialog").dialog({autoOpen: false,
-        title: "Edit Model",
-        minWidth: 500,
-        position: { my: "center", at: "center" },
-        classes: {
-            "ui-dialog": "pixelDialog",
-            "ui-dialog-titlebar": "pixelDialogTitleBar"
-        }
-    }).draggable();
 
-    $("#aboutDialog").dialog({autoOpen: false,
-        title: "About Pixel Physics",
-        minWidth: 500,
-        position: { my: "center", at: "center" },
-        classes: {
-            "ui-dialog": "pixelDialog",
-            "ui-dialog-titlebar": "pixelDialogTitleBar"
 
-        }
-    }).draggable();
-
-    $("#edit3x3Dialog").dialog({autoOpen: false,
-        title: "Edit Pixel Matrix",
-        minWidth: 540,
-        position: { my: "center", at: "center" },
-        classes: {
-            "ui-dialog": "pixelDialog",
-            "ui-dialog-titlebar": "pixelDialogTitleBar"
-
-        }
-    }).draggable();
-    
-
-    $(".singlepixel").click(function() {
-        singlepixelClick(this);
-    });
-
-    $(".reset").click(function() { pixelEditReset(this);});
-    $(".save").click(function() { pixelEditSave(this);});
-    
-    $('#updateModel').click(function(){
-        initModel();
-        renderPixelField();
-    });
-    $("#menuabout").click(function() {menuAboutClick()});
-    $("#menutext").click(function() {menuTextClick()});
-    $("#textarea1").val(pixelFieldLines.join("\n"));
     initModel();
     renderPixelField();
 });
@@ -153,7 +65,7 @@ function transformTo6633(linesA) {
         row6Matrix.push(col6Matrix);
         for(row3 = 0; row3 < 3; row3++) {
           var newObj = new Pixel3x3();
-          col6Matrix.push(newObj.matrix);
+          col6Matrix.push(newObj);
           for(col3 = 0; col3 < 3; col3++) {
             var line = (row6 * 3) + (row3);
             var triple = col6;
