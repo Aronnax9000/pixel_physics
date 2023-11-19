@@ -40,7 +40,7 @@ const VON_NEUMANN_NEIGHBORHOOD = [
   "-0+ 0-+ 0+- +0- +-0 -+0"
   ];
   
-
+/* */
 class Pixel6x6 {
   constructor() {
     this.matrix = [];
